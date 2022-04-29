@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,800&display=swap');
+
+#cur{ cursor: url("https://www.cursor.cc/cursor3d/78047.png"), auto;
+}
+
+*{
+    cursor: url("https://www.cursor.cc/cursor3d/78047.png") auto;
+    margin: 0;
+    padding: 0;
+    font-family: 'Spectral', serif;
+}
+
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #101010;
+    width: auto;
+    height: 65px;
+    box-shadow: 0px 0px 50px #101010;
+}
+
+.riot {
+    display: flex;
+    justify-content: left;
+    width: 50%;
+    align-items: center;  
+}
+
+.play{
+    display: flex;
+    justify-content: right;
+    width: 50%;
+    height: 30px;
+    margin: 15px 20px 15px 50px;
+    border-radius: 5px;
+}
+
+body{
+    background-image: src (./img/Rakan_img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
