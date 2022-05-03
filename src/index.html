@@ -1,36 +1,99 @@
 <!DOCTYPE html>
-<html>
+<html> 
+  
   <head>
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poro Champ</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/Logo_LOL.png?raw=true">
-  
-  </head> 
+  </head>
+
   <body id="cur">
 
     <div id="root"></div>
 
     <header class="nav">
-      <a href="https://www.riotgames.com/es"><img class="riot" src="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/Logo-rito_gris.png?raw=true" alt="Riot Games"></a>
-      <a href="https://signup.las.leagueoflegends.com/es/signup/index#/"><button class="play">JUEGA</button></a>
+      <a href="index.html"><img class="riot" src="/SCL020-data-lovers/img/logo-rito-gris.png"></a>
+      <p class="tittle">PORO CHAMP</p>
+      <a href="https://signup.las.leagueoflegends.com/es/signup/index#/"><p class="play">JUEGA</p></a>
     </header>
 
     <div class="videoButton-container">
+      
       <video class="video" autoplay loop muted>
         <source src="/SCL020-data-lovers/img/Ornn, the Fire below the Mountain _ Login Screen - League of Legends (1080p_25fps_H264-128kbit_AAC).mp4" type="video/mp4">
       </video>
       <img class="logoLeague" src="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/Logo_League-of-Legends.png?raw=true" alt="leagueOfLegends">
       <button>INICIA</button>
+      
     </div>
     
+    <div class="container-secondScreen">
+    <div class="PantallaDos">
+
+      <div id = rol>
+        <label><input type="radio" name="cRol" id="assa" onclick="displayImage('assassin', true);" ><img src="/SCL020-data-lovers/img/all-role-logo/ass-logo.png" alt="Asesino"></label>
+        <label><input type="radio" name="cRol" id="fight" onclick="displayImage('fighter' , true);" ><img src="/SCL020-data-lovers/img/all-role-logo/fight-logo.png" alt="Luchador"></label>
+        <label><input type="radio" name="cRol" id="mag" onclick="displayImage('marksman' , true);" ><img src="/SCL020-data-lovers/img/all-role-logo/mage-logo.png" alt="Mago"></label>
+        <label><input type="radio" name="cRol" id="mark"onclick="displayImage('mage' , true);"><img src="/SCL020-data-lovers/img/all-role-logo/marks-logo.png" alt="Tirador"></label>
+        <label><input type="radio" name="cRol" id="sup"onclick="displayImage('tank' , true);"><img src="/SCL020-data-lovers/img/all-role-logo/sup-logo.png" alt="Support"></label>
+        <label><input type="radio" name="cRol" id="tank"onclick="displayImage('support' , true);"><img src="/SCL020-data-lovers/img/all-role-logo/tank-logo.png" alt="Tanque"></label>
+      </div>
+
+      <div id= "champs">
+        <img src="/SCL020-data-lovers/img/circle-frame.png" alt="frame">
+        <img src="/SCL020-data-lovers/img/" alt="frame">
+        <div id="assassin">
+          <img src="/SCL020-data-lovers/img/champs/akali-ass.png">
+          <h3>Asesino</h3>
+          <p>Son campeones especializados en matar o desestabilizar objetivos de alto valor estratégico. Son cazadores oportunistas que buscan el momento favorable antes de entrar al combate aprovechando sobretodo su capacidad de movimiento.</p>
+        </div>
+
+        <div id="fighter">
+          <img src="/SCL020-data-lovers/img/champs/yasuo-figh.png">
+          <h3>Luchador</h3>
+          <p>Son un grupo diverso de combatientes de corto alcance que sobresalen tanto causando como resistiendo daño.</p>
+        </div>
+        
+        <div id="marksman">
+          <img src="/SCL020-data-lovers/img/champs/jinx-mark.png">
+          <h3>Tirador</h3>
+          <p>Los tiradores son campeones que atacan a distancia, sacrifican su defensa para usar ataques que ayudan al equipo a eliminar rapidamente a los rivales.</p>
+
+        </div>
+
+        <div id="mage">
+          <img src="/SCL020-data-lovers/img/champs/lux-mag.png">
+          <h3>Mago</h3>
+          <p>Por lo general son campeones a distancia que priorizan habilidades, hechizos de larga distancia y AoE (área de efecto) poderosos por sobre sus ataques básicos.</p>
+        </div>
+
+        <div id="tank">
+          <img src="/SCL020-data-lovers/img/champs/leona-tank.png">
+          <h3>Tanque</h3>
+          <p>Los Tanques son campeones de combate cuerpo a cuerpo que sacrifican el daño a cambio de un poderoso control de masas y resistiendo oportunamente el daño generado por el equipo contrario.</p>
+        </div>
+        <div id="support">
+          <img src="/SCL020-data-lovers/img/champs/thresh-sup.png">
+          <h3>Soporte</h3>
+          <p>Son campeones que se encargan de apoyar a sus compañeros de equipo mediante bonificaciones, curaciones, escudos, inmovilizaciones a los enemigos y cualquier otro control de masas existente.</p>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
    
-    <div id="title">Poro Champ</div>
     <script src="main.js" type="module"></script>
 
     <footer>
-
+      <a href="https://www.leagueoflegends.com/es-mx/"><img class="logoLOL" src="/SCL020-data-lovers/img/logo_LOL.png"></a>
+      <a href="https://www.riotgames.com/es"><img class="logoRiot" src="/SCL020-data-lovers/img/logo-rito-gris.png" alt="RiotGames"></a>
+      <div class="containerLogos" >
+        <a href="https://www.youtube.com/c/leagueoflegends"><img class="logoYT" src="/SCL020-data-lovers/img/Logo_YouTube.png" alt="YouTubeLOL"></a>
+        <a href="https://twitter.com/LeagueOfLegends"><img class="logoT" src="/SCL020-data-lovers/img/Logo_Twitter.png" alt="TwitterLOL"></a>
+      </div>  
     </footer>
   </body>
 </html>
