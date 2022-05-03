@@ -32,20 +32,24 @@
     <div class="container-secondScreen">
     <div class="PantallaDos">
 
-      <div id = rol>
-        <label><input type="radio" name="cRol" id="assa" onclick="displayImage('assassin', true);" ><img src="/SCL020-data-lovers/img/all-role-logo/ass-logo.png" alt="Asesino"></label>
-        <label><input type="radio" name="cRol" id="fight" onclick="displayImage('fighter' , true);" ><img src="/SCL020-data-lovers/img/all-role-logo/fight-logo.png" alt="Luchador"></label>
-        <label><input type="radio" name="cRol" id="mag" onclick="displayImage('marksman' , true);" ><img src="/SCL020-data-lovers/img/all-role-logo/mage-logo.png" alt="Mago"></label>
-        <label><input type="radio" name="cRol" id="mark"onclick="displayImage('mage' , true);"><img src="/SCL020-data-lovers/img/all-role-logo/marks-logo.png" alt="Tirador"></label>
-        <label><input type="radio" name="cRol" id="sup"onclick="displayImage('tank' , true);"><img src="/SCL020-data-lovers/img/all-role-logo/sup-logo.png" alt="Support"></label>
-        <label><input type="radio" name="cRol" id="tank"onclick="displayImage('support' , true);"><img src="/SCL020-data-lovers/img/all-role-logo/tank-logo.png" alt="Tanque"></label>
+      <div>
+
+        <label><input type="button" name="cRol" id="assa" true><img src="/SCL020-data-lovers/img/all-role-logo/ass-logo.png" alt="Asesino"></label>
+        <label><input type="button" name="cRol" id="fight" true><img src="/SCL020-data-lovers/img/all-role-logo/fight-logo.png" alt="Luchador"></label>
+        <label><input type="button" name="cRol" id="mag" true><img src="/SCL020-data-lovers/img/all-role-logo/mage-logo.png" alt="Mago"></label>
+        <label><input type="button" name="cRol" id="mark" true><img src="/SCL020-data-lovers/img/all-role-logo/marks-logo.png" alt="Tirador"></label>
+        <label><input type="button" name="cRol" id="sup" true><img src="/SCL020-data-lovers/img/all-role-logo/sup-logo.png" alt="Support"></label>
+        <label><input type="button" name="cRol" id="tank" true><img src="/SCL020-data-lovers/img/all-role-logo/tank-logo.png" alt="Tanque"></label>
+      
       </div>
 
-      <div id= "champs">
+      <div>
+
         <div class="frames">
-          <img src="/SCL020-data-lovers/img/circle-frame.png" alt="frame">
-          <img src="/SCL020-data-lovers/img/black-dot-dot.gif" alt="frame">
+          <img class="circleFrame" src="../img/black-dot-dot.gif" alt="circleFrame">
+          <img class="dotFrame" src="/SCL020-data-lovers/img/black-dot-dot.gif" alt="dotFrame">
         </div>
+
         <div id="assassin">
           <img src="/SCL020-data-lovers/img/champs/akali-ass.png">
           <h3>Asesino</h3>
@@ -62,7 +66,6 @@
           <img src="/SCL020-data-lovers/img/champs/jinx-mark.png">
           <h3>Tirador</h3>
           <p>Los tiradores son campeones que atacan a distancia, sacrifican su defensa para usar ataques que ayudan al equipo a eliminar rapidamente a los rivales.</p>
-
         </div>
 
         <div id="mage">
@@ -76,11 +79,13 @@
           <h3>Tanque</h3>
           <p>Los Tanques son campeones de combate cuerpo a cuerpo que sacrifican el daño a cambio de un poderoso control de masas y resistiendo oportunamente el daño generado por el equipo contrario.</p>
         </div>
+
         <div id="support">
           <img src="/SCL020-data-lovers/img/champs/thresh-sup.png">
           <h3>Soporte</h3>
           <p>Son campeones que se encargan de apoyar a sus compañeros de equipo mediante bonificaciones, curaciones, escudos, inmovilizaciones a los enemigos y cualquier otro control de masas existente.</p>
         </div>
+
       </div>
 
 
@@ -90,12 +95,15 @@
     <script src="main.js" type="module"></script>
 
     <footer>
+
       <a href="https://www.leagueoflegends.com/es-mx/"><img class="logoLOL" src="/SCL020-data-lovers/img/logo_LOL.png"></a>
       <a href="https://www.riotgames.com/es"><img class="logoRiot" src="/SCL020-data-lovers/img/logo-rito-gris.png" alt="RiotGames"></a>
+      
       <div class="containerLogos" >
         <a href="https://www.youtube.com/c/leagueoflegends"><img class="logoYT" src="/SCL020-data-lovers/img/Logo_YouTube.png" alt="YouTubeLOL"></a>
         <a href="https://twitter.com/LeagueOfLegends"><img class="logoT" src="/SCL020-data-lovers/img/Logo_Twitter.png" alt="TwitterLOL"></a>
       </div>  
+
     </footer>
   </body>
 </html>
