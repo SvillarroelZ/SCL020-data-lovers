@@ -195,3 +195,13 @@ footer{
     border: red solid 1px ;
     background-image: url(/SCL020-data-lovers/img/Rakan_img.jpg);
 }
+
+.dotFrame{
+    width: 250px;
+    height: 250px;
+}
+
+.circleFrame{
+    width: 250px;
+    height: 250px;
+}
