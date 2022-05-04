@@ -5,11 +5,13 @@
     margin: 0;
     padding: 0;
     font-family: 'Spectral', serif;
+    
 }
 
 html{
     scroll-behavior: smooth;
 }
+
 ::-webkit-scrollbar{ 
     background: #111;
     width: 15px;
@@ -65,6 +67,7 @@ html{
     height: 35px;
     margin-right: 20px;
     
+    
     font-size: large;
     font-weight: 600;
     color: #9D9D9D;
@@ -80,11 +83,13 @@ html{
 }
 
  body{
+    display: flex;
     background-image: url(/SCL020-data-lovers/img/Rakan_img.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    flex-direction: column;
 } 
 
 .videoButton-container{
@@ -109,8 +114,11 @@ html{
     align-items: center;
     width: 220px;
     height: 45px;
+    z-index: 2;
+    text-decoration: none;
 
     margin-top: 60px; /* aqui tambien hay negativo */
+    margin-bottom: 50px;
     
     font-size: 40px;
     letter-spacing: 2.8;
@@ -125,83 +133,142 @@ html{
     text-shadow: 0.1em 0.1em 0.1em #111;
 }
 
+.url-boton{
+    text-decoration: none;
+}
+
 .logoLeague{
     margin-top: -500px;
 }
 
 footer{
     display: flex;
+    flex-direction: row;
     justify-content:space-between;
     align-items: center;
-    flex-direction: row;
     
     width: auto;
-    height: 45px;
+    height: 60px;
     background-color: #252525;
-    margin-top: 3px;
-   
+    margin-top: 3px; 
 }
 
-.logoLOL{
+.logoLOL {
     display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-
-    width: 35px;
-    height: 35px;
-   
+    width: 8%;
+    height: 10%;
     margin-left: 30px;
-
 }
 
 .logoRiot{
     display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-
-    width: 30%;
-    height: auto;
+    width: 50%;
+    height: 10%;
 }
 
-.containerLogos{
-    display: flex;      
-}
-
-.logoT{
+.cont-logos{
     display: flex;
-    align-content: center;
-    justify-content: center;
     align-items: center;
-    width: 23%;
-    height: auto;    
+    align-content: center;
+    margin-right: 30px;    
 }
 
-.logoYT{
-    display: flex;
-    align-content: center;
-    justify-content: center;
+.logoRS1{
+    width: 35%;
+    height: 25%;
     align-items: center;
-    width: 23%;
-    height: auto;
+}
+.logoRS2{
+    width: 35%;
+    height: 25%;
+    align-items: center;
 }
 
 .container-secondScreen{
     display: flex;
-
-    width: 90%;
-    height: 90%;
-    border: red solid 1px ;
-    background-image: url(/SCL020-data-lovers/img/Rakan_img.jpg);
+    justify-content: left;
+    width: auto;
+    height: 1000px;
+    border: #B8B892 solid 2px ;
+    border-radius: 0px;
+    background-image: url(/SCL020-data-lovers/img/backgroundPattern.png);
+    background-color: whitesmoke;
 }
 
+.container-roles{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 50%;
+    margin: 6%; 
+}
+
+.sub-cont-rol{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content:flex-end
+}
 .dotFrame{
-    width: 250px;
-    height: 250px;
+    width: auto;
+    height: 375px;
+    position: absolute;
+    opacity: 15%;
 }
 
 .circleFrame{
-    width: 250px;
-    height: 250px;
+    width: auto;
+    height: 400px;
+    position: absolute;
+}
+
+
+.akali {
+    width: auto;
+    height: 470px;
+}
+.yasuo {
+    width: auto;
+    height: 470px;
+}
+.jinx {
+    width: auto;
+    height: 470px;  
+}
+.lux {
+    width: auto;
+    height: 470px;
+}
+.leona {
+    width: auto;
+    height: 470px;
+
+}
+.thresh {
+    width: auto;
+    height: 470px; 
+}
+
+#div-assassin{
+    display:none;
+    position: absolute;z-index:2;   
+}
+#div-fighter{
+    display:none;
+    position: absolute;z-index:2;
+}
+#div-mage{
+    display:none;
+    position: absolute;z-index:2;
+}
+#div-marksman{
+    display:none;
+    position: absolute;z-index:2;
+}
+#div-support{
+    display:none;
+    position: absolute;z-index:2;
+}
+#div-tank{
+    display:none;
+    position: absolute;z-index:2;
 }

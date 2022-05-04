@@ -5,43 +5,79 @@ import data from './data/pokemon/pokemon.js';
 
 console.log(example, data);
 
+const eventoClickAssassin = document.getElementById("assassin");
+eventoClickAssassin.addEventListener("click", mostrarAssassin);
 
-//intento3
-// function rolChoice() {
-//      if(document.getElementById("assa").checked == true){
-//          document.getElementById("assassin").style.display = 'block';
-//          document.getElementById("fighter").style.display = 'none';
-//          document.getElementById("marksman").style.display = 'none';
-//          document.getElementById("mage").style.display = 'none';
-//          document.getElementById("tank").style.display = 'none';
-//          document.getElementById("support").style.display = 'none';
-//      }
-//  }
-//   rolChoice();
+function mostrarAssassin(){
+  document.getElementById("div-assassin").style.display="block";
+  document.getElementById("div-fighter").style.display="none";
+  document.getElementById("div-mage").style.display="none";
+  document.getElementById("div-marksman").style.display="none";
+  document.getElementById("div-support").style.display="none";
+  document.getElementById("div-tank").style.display="none";  
+}
 
-//intento2
-// function displayImage(rol) {
-//   var imgs = document.querySelectorAll(".cRol > img");
 
-//   for (var i = 0; i < imgs.length; i++) {
-//       imgs[i].style.display = "none";
-//   }
-//   document.getElementById(id).style.display = "inline";
-// }
+const eventoClickFighter = document.getElementById("fighter");
+eventoClickFighter.addEventListener("click", mostrarFighter);
 
-//intento3
+function mostrarFighter(){
+  document.getElementById("div-assassin").style.display="none";
+  document.getElementById("div-fighter").style.display="block";
+  document.getElementById("div-mage").style.display="none";
+  document.getElementById("div-marksman").style.display="none";
+  document.getElementById("div-support").style.display="none";
+  document.getElementById("div-tank").style.display="none";  
+}
 
-// var lastUnique;
-// function displayImage(id, unique) {
-//     var el = document.getElementById(id);
 
-//     if (unique) {
-//         if (lastUnique) {
-//             lastUnique.style.display = 'none';
-//         }
+const eventoClickMage = document.getElementById("mage");
+eventoClickMage.addEventListener("click", mostrarMage);
 
-//         lastUnique = el;
-//     }
+function mostrarMage(){
+  document.getElementById("div-assassin").style.display="none";
+  document.getElementById("div-fighter").style.display="none";
+  document.getElementById("div-mage").style.display="block";
+  document.getElementById("div-marksman").style.display="none";
+  document.getElementById("div-support").style.display="none";
+  document.getElementById("div-tank").style.display="none";  
+}
 
-//     el.style.display = 'block';
-// }
+
+const eventoClickMarksman = document.getElementById("marksman");
+eventoClickMarksman.addEventListener("click", mostrarMarksman);
+
+function mostrarMarksman(){
+  document.getElementById("div-assassin").style.display="none";
+  document.getElementById("div-fighter").style.display="none";
+  document.getElementById("div-mage").style.display="none";
+  document.getElementById("div-marksman").style.display="block";
+  document.getElementById("div-support").style.display="none";
+  document.getElementById("div-tank").style.display="none";  
+}
+
+
+const eventoClickSupport = document.getElementById("support");
+eventoClickSupport.addEventListener("click", mostrarSupport);
+
+function mostrarSupport(){
+  document.getElementById("div-assassin").style.display="none";
+  document.getElementById("div-fighter").style.display="none";
+  document.getElementById("div-mage").style.display="none";
+  document.getElementById("div-marksman").style.display="none";
+  document.getElementById("div-support").style.display="block";
+  document.getElementById("div-tank").style.display="none";  
+}
+
+
+const eventoClickTank = document.getElementById("tank");
+eventoClickTank.addEventListener("click", mostrarTank);
+
+function mostrarTank(){
+  document.getElementById("div-assassin").style.display="none";
+  document.getElementById("div-fighter").style.display="none";
+  document.getElementById("div-mage").style.display="none";
+  document.getElementById("div-marksman").style.display="none";
+  document.getElementById("div-support").style.display="none";
+  document.getElementById("div-tank").style.display="block";  
+}
