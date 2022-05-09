@@ -6,7 +6,7 @@ import data from './data/pokemon/pokemon.js';
 console.log(example, data);
 
 const eventoClickAssassin = document.getElementById("assassin");
-eventoClickAssassin.addEventListener("click", mostrarAssassin);
+eventoClickAssassin.addEventListener("click", mostrarAssassin,);
 
 function mostrarAssassin(){
   document.getElementById("div-assassin").style.display="block";
