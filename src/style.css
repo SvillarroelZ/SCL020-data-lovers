@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     font-family: 'Spectral', serif;
-    
 }
 
 html{
@@ -46,7 +45,7 @@ html{
     justify-content: center;
     align-items: center;
     align-content: center;
-    width: 40%;
+    width: 150px;
     margin-left: 30px;
 }
 
@@ -56,7 +55,6 @@ html{
     font-style:unset;
     justify-content: center;
     font-weight: 900;
-    margin-right: 150px;
     text-shadow: 8px 2px 8px #101010;   
     
 }
@@ -86,7 +84,7 @@ html{
 
  body{
     display: flex;
-    background-image: url(https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/Rakan_img.jpg?raw=true);
+    background-image: url(/src/img/Rakan_img.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -153,7 +151,7 @@ html{
     height: 1000px;
     border: #B8B892 solid 2px ;
     border-radius: 1.5%;
-    background-image: url(https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/backgroundPattern.png?raw=true);
+    background-image: url(/src/img/backgroundPattern.png);
     background-color: whitesmoke;
 }
 
@@ -164,6 +162,11 @@ html{
 
     width: 50%;
     margin: 6%; 
+}
+
+.rButton{
+    display: flex;
+    justify-content: space-around;
 }
 
 .sub-cont-rol{
@@ -190,6 +193,14 @@ html{
     margin: 50px 15px;
 }
 
+.btnChamps{
+    width: auto;
+    height: 50px;
+}
+
+
+/*     --     texto champs    -    */
+
 .tittleRol{
     text-align: center;
     margin-right: 16%;
@@ -201,6 +212,7 @@ html{
     margin: 5% 10% 10% 10%;
     padding-right: 18%;
 }
+
 
 .akali {
     width: auto;
@@ -265,40 +277,40 @@ footer{
     width: auto;
     height: 60px;
     background-color: #252525;
-    margin-top: 3px; 
+    margin-top: 2px; 
+    padding: 5px;
     border-radius: 2%;
-
-    
 
 }
 
 .logoLOL {
     display: flex;
-    width: 8%;
-    height: 10%;
+    width: auto;
+    height: 50px;;
     margin-left: 30px;
 }
 
 .logoRiot{
     display: flex;
-    width: 50%;
-    height: 10%;
+    width: auto;
+    height: 50px;
 }
 
 .cont-logos{
     display: flex;
-    align-items: center;
-    align-content: center;
-    margin-right: 30px;    
+    align-items: center;  
+    margin-right: 20px; 
+     
 }
 
 .logoRS1{
-    width: 35%;
-    height: 25%;
-    align-items: center;
+    width: 55px;
+    height: 55px;
+    margin-top: 8px;   
 }
+
 .logoRS2{
-    width: 35%;
-    height: 25%;
-    align-items: center;
+    width: 55px;
+    height: 55px;
+    margin-top: 8px;
 }

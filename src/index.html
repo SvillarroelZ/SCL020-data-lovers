@@ -2,13 +2,11 @@
 <html> 
   
   <head>
-
     <meta charset="utf-8"> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poro Champ</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/Logo_LOL.png?raw=true">
-
+    <link rel="icon" href="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/src/img/Logo_LOL.png?raw=true">
   </head>
 
   <body>
@@ -16,7 +14,7 @@
     <div id="root"></div>
     
     <header class="nav">
-      <a href="https://www.riotgames.com/es"><img class="riot" src="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/logo-rito-gris.png?raw=true"></a>
+      <a href="https://www.riotgames.com/es"><img class="riot" src="/src/img/logo-rito-gris.png"></a>
       <p class="tittle">PORO CHAMP</p>
       <a href="https://signup.las.leagueoflegends.com/es/signup/index#/"><p class="play">JUEGA</p></a>
     </header>
@@ -27,7 +25,7 @@
         <source src="img/Ornn, the Fire below the Mountain _ Login Screen - League of Legends (1080p_25fps_H264-128kbit_AAC).mp4" type="video/mp4">
       </video>
 
-      <img class="logoLeague" src="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/Logo_League-of-Legends.png?raw=true" alt="leagueOfLegends"> 
+      <img class="logoLeague" src="/src/img/Logo_League-of-Legends.png" alt="leagueOfLegends"> 
 
       <button>
         <a class="url-boton" href="#section2">INICIA</a>
@@ -35,48 +33,49 @@
     </div>
 
       <div class="container-secondScreen" id="section2">
+      
         <div class="container-roles">
-          <label class="sub-cont-rol"><input type="radio" name="cRol" id="assassin">Asesino<img src="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/all-rol-logo/assa-logo.png?raw=true" alt="Asesino"></label>
-          <label class="sub-cont-rol"><input type="radio" name="cRol" id="fighter">Luchador<img src="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/all-rol-logo/fight-logo.png?raw=true" alt="Luchador"></label>
-          <label class="sub-cont-rol"><input type="radio" name="cRol" id="mage">Mago<img src="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/all-rol-logo/mage-logo.png?raw=true" alt="Mago"></label>
-          <label class="sub-cont-rol"><input type="radio" name="cRol" id="marksman">Tirador<img src="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/all-rol-logo/mark-logo.png?raw=true" alt="Tirador"></label>
-          <label class="sub-cont-rol"><input type="radio" name="cRol" id="support">Soporte<img src="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/all-rol-logo/sup-logo.png?raw=true" alt="Support"></label>
-          <label class="sub-cont-rol"><input type="radio" name="cRol" id="tank">Tanque<img src="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/all-rol-logo/tank-logo.png?raw=true" alt="Tanque"></label>
+          <label class="sub-cont-rol"><input class="rButton" type="radio" name="cRol" id="assassin">Asesino<img src="/src/img/all-rol-logo/assa-logo.png" alt="Asesino"></label>
+          <label class="sub-cont-rol"><input class="rButton" type="radio" name="cRol" id="fighter">Luchador<img src="/src/img/all-rol-logo/fight-logo.png" alt="Luchador"></label>
+          <label class="sub-cont-rol"><input class="rButton" type="radio" name="cRol" id="mage">Mago<img src="/src/img/all-rol-logo/mage-logo.png"alt="Mago"></label>
+          <label class="sub-cont-rol"><input class="rButton" type="radio" name="cRol" id="marksman">Tirador<img src="/src/img/all-rol-logo/mark-logo.png" alt="Tirador"></label>
+          <label class="sub-cont-rol"><input class="rButton" type="radio" name="cRol" id="support">Soporte<img src="/src/img/all-rol-logo/sup-logo.png" alt="Support"></label>
+          <label class="sub-cont-rol"><input class="rButton" type="radio" name="cRol" id="tank">Tanque<img src="/src/img/all-rol-logo/tank-logo.png"  alt="Tanque"></label>
         </div>
-        
+        <button class="btnChamps">Todos los campeones</button>
         <div>   
           <div id="div-assassin">
-            <img class="akali" src="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/champs/akali-ass.png?raw=true">
+            <img class="akali" src="/src/img/champs/akali-ass.png">
             <h3 class="tittleRol">Asesino</h3>
             <p class="textRol" >Son campeones especializados en matar o desestabilizar objetivos de alto valor estratégico. Son cazadores oportunistas que buscan el momento favorable antes de entrar al combate aprovechando sobretodo su capacidad de movimiento.</p>
           </div>
   
           <div id="div-fighter">
-            <img class="yasuo" src="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/champs/yasuo-figh.png?raw=true">
+            <img class="yasuo" src="/src/img/champs/yasuo-figh.png">
             <h3 class="tittleRol">Luchador</h3>
             <p class="textRol" >Son un grupo diverso de combatientes de corto alcance que sobresalen tanto causando como resistiendo daño.</p>
           </div>
 
           <div id="div-mage">
-            <img class="lux" src="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/champs/lux-mag.png?raw=true">
+            <img class="lux" src="/src/img/champs/lux-mag.png">
             <h3 class="tittleRol">Mago</h3>
             <p class="textRol" >Por lo general son campeones a distancia que priorizan habilidades, hechizos de larga distancia y AoE (área de efecto) poderosos por sobre sus ataques básicos.</p>
           </div>
   
           <div id="div-marksman">
-            <img class="jinx" src="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/champs/jinx-mark.png?raw=true">
+            <img class="jinx" src="/src/img/champs/jinx-mark.png">
             <h3 class="tittleRol">Tirador</h3>
             <p class="textRol" >Los tiradores son campeones que atacan a distancia, sacrifican su defensa para usar ataques que ayudan al equipo a eliminar rapidamente a los rivales.</p>
           </div>
 
           <div id="div-support">
-           <img class="thresh" src="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/champs/thresh-sup.png?raw=true">
+           <img class="thresh" src="/src/img/champs/thresh-sup.png">
            <h3 class="tittleRol">Soporte</h3>
            <p class="textRol" >Son campeones que se encargan de apoyar a sus compañeros de equipo mediante bonificaciones, curaciones, escudos, inmovilizaciones a los enemigos y cualquier otro control de masas existente.</p>
           </div>
 
           <div id="div-tank">
-            <img class="leona" src="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/champs/leona-tank.png?raw=true">
+            <img class="leona" src="/src/img/champs/leona-tank.png">
             <h3 class="tittleRol">Tanque</h3>
             <p class="textRol" >Los Tanques son campeones de combate cuerpo a cuerpo que sacrifican el daño a cambio de un poderoso control de masas y resistiendo oportunamente el daño generado por el equipo contrario.</p>
           </div>
@@ -84,8 +83,8 @@
         </div>
         
         <div class="frames">
-          <img class="circleFrame" src= "https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/circleFrame.png?raw=true" alt="circleFrame">
-          <img class="dotFrame" src= "https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/black-dot.gif?raw=true" alt="dotFrame">
+          <img class="circleFrame" src= "/src/img/circleFrame.png" alt="circleFrame">
+          <img class="dotFrame" src= "/src/img/black-dot.gif" alt="dotFrame">
         </div>
       
       </div>
@@ -94,16 +93,16 @@
     <footer>
 
       <div>
-        <a href="https://www.leagueoflegends.com/es-mx/"><img class="logoLOL" src="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/Logo_LOL.png?raw=true"></a>
+        <a href="https://www.leagueoflegends.com/es-mx/"><img class="logoLOL" src="/src/img/Logo_LOL.png"></a>
       </div>
       
       <div>
-        <a href="https://www.riotgames.com/es"><img class="logoRiot" src="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/logo-rito-gris.png?raw=true" alt="RiotGames"></a>
+        <a href="https://www.riotgames.com/es"><img class="logoRiot" src="/src/img/logo-rito-gris.png" alt="RiotGames"></a>
       </div>
       
       <div class="cont-logos">
-        <a href="https://www.youtube.com/c/leagueoflegends"><img class="logoRS1" src="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/Logo_YouTube.png?raw=true" alt="YouTubeLOL"></a>
-        <a href="https://twitter.com/LeagueOfLegends"><img class="logoRS2" src="https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/Logo_Twitter.png?raw=true" alt="TwitterLOL"></a>
+        <a href="https://www.youtube.com/c/leagueoflegends"><img class="logoRS1" src="/src/img/Logo_YouTube.png" alt="YouTubeLOL"></a>
+        <a href="https://twitter.com/LeagueOfLegends"><img class="logoRS2" src="/src/img/Logo_Twitter.png" alt="TwitterLOL"></a>
       </div>  
 
     </footer>
