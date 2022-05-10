@@ -38,6 +38,7 @@ html{
     width: auto;
     height: 60px;
     box-shadow: 0px 0px 60px #101010;
+    /* position:fixed; */
 }
 
 .riot{
@@ -85,7 +86,7 @@ html{
 
  body{
     display: flex;
-    background-image: url(/SCL020-data-lovers/img/Rakan_img.jpg);
+    background-image: url(https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/Rakan_img.jpg?raw=true);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -143,49 +144,7 @@ html{
     margin-top: -500px;
 }
 
-footer{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    align-items: center;
-    
-    width: auto;
-    height: 60px;
-    background-color: #252525;
-    margin-top: 3px; 
-    border-radius: 2%;
-}
-
-.logoLOL {
-    display: flex;
-    width: 8%;
-    height: 10%;
-    margin-left: 30px;
-}
-
-.logoRiot{
-    display: flex;
-    width: 50%;
-    height: 10%;
-}
-
-.cont-logos{
-    display: flex;
-    align-items: center;
-    align-content: center;
-    margin-right: 30px;    
-}
-
-.logoRS1{
-    width: 35%;
-    height: 25%;
-    align-items: center;
-}
-.logoRS2{
-    width: 35%;
-    height: 25%;
-    align-items: center;
-}
+/*     --     SEGUNDA PANTALLA     --     */
 
 .container-secondScreen{
     display: flex;
@@ -194,7 +153,7 @@ footer{
     height: 1000px;
     border: #B8B892 solid 2px ;
     border-radius: 1.5%;
-    background-image: url(/SCL020-data-lovers/img/backgroundPattern.png);
+    background-image: url(https://github.com/SvillarroelZ/SCL020-data-lovers/blob/main/img/backgroundPattern.png?raw=true);
     background-color: whitesmoke;
 }
 
@@ -292,4 +251,54 @@ footer{
 #div-tank{
     display:none;
     position: absolute;z-index:2;
+}
+
+
+/*     --     FOOTER     --     */
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    
+    width: auto;
+    height: 60px;
+    background-color: #252525;
+    margin-top: 3px; 
+    border-radius: 2%;
+
+    
+
+}
+
+.logoLOL {
+    display: flex;
+    width: 8%;
+    height: 10%;
+    margin-left: 30px;
+}
+
+.logoRiot{
+    display: flex;
+    width: 50%;
+    height: 10%;
+}
+
+.cont-logos{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-right: 30px;    
+}
+
+.logoRS1{
+    width: 35%;
+    height: 25%;
+    align-items: center;
+}
+.logoRS2{
+    width: 35%;
+    height: 25%;
+    align-items: center;
 }
