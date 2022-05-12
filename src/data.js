@@ -1,17 +1,19 @@
 export const getData = (data) => {
 
-  for(let i = 0; i < saveData.lenght; i++){
-    console.log(saveData[i].tags);
-  }
+
+  // for(let i = 0; i < saveData.lenght; i++){
+  //   console.log(saveData[i].tags);
+  // }
 
 
 /*
+export const
   const allRoles = data.map(element => element.tags);
   const everyRoles = Array.from(new Set(allRoles));
   console.log(data);
 
-   const allNames=data.map(element=>element.name);
-  const everyNames = Array.from(new Set(allNames));
+  const allcard=allData.map(element=>element.name);
+  const everyNames = Array.from(new Set(allData));
 
   //console.log(everyNames);
 
