@@ -14,8 +14,10 @@ const allChamp= Object.entries(allData).forEach(par =>{
   const valor = par[1];
   
   //console.log(allData[clave])
-  //console.log(allData[valor])
+  ////console.log(allData[valor])
 })
+
+
 
 
 const tarjetas = document.getElementById("cards"); //id del div donde vamos a meter el p creado
