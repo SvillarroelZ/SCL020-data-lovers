@@ -1,5 +1,9 @@
 export const getData = (data) => {
-
+};
+export const filtrarPorRol= (rolChoice, allData) =>{
+    let roles = allData.filter((campeon)=>{return campeon.tags.includes(rolChoice)} )
+   return roles
+  }
 
   // for(let i = 0; i < saveData.lenght; i++){
   //   console.log(saveData[i].tags);
@@ -40,6 +44,6 @@ export const
 
   // return 'example'; 
   */
-};
+
 
 

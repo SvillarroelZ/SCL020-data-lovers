@@ -1,63 +1,73 @@
-import { getData } from './data.js';
+import { getData, filtrarPorRol } from './data.js';
 import data from "./data/lol/lol.js";
 //console.log(data.data)
 getData(data);
 const saveData = data; // todos la data
 //console.log(saveData) // toda la data, incluye: data, format, type, version
-const allData = Object.values(saveData.data); // toda la data como array. 
+const allData = Object.values(saveData.data); // toda la data como array| const allCards = Array.from(new Set(allData)); console.log(allCards);
 //console.log(allData); // muestra por posicion (array).
 //console.log(allData[i]) // imprime el primer objeto, de posicion 0 dentro del array allData
-//console.log(allData[0].info);
+//console.log(allData[0].info);// toda la info de la primera posicion
 
 const allChamp= Object.entries(allData).forEach(par =>{
-  const clave = par[0];
+  //const clave = par[0]; //muestra la data como objeto¿?
   const valor = par[1];
   
   //console.log(allData[clave])
-  ////console.log(allData[valor])
+  //console.log(allData[valor]) // 134 undefined
 })
-
-const tarjetas = document.getElementById("cards"); //id del div donde vamos a meter el p creado
-const divCards = document.createElement("p"); // el parrafo que estamos creando para meter la info
-tarjetas.appendChild(divCards); // creando un "p" al id "cards".
-
 
 //const allCard=allData.map(element=>element.allData);
 //const allRoles = allData.map(element => element.tags); //
   //const everyRoles = Array.from(new Set(allRoles));
   //console.log(everyRoles);
 
-  const getNames = (allData) => {
-    const names = allData.map((i) => i.name);
-    let onlyNames = [];
-    names.forEach((name) => {
-      if (!onlyNames.includes(name)) {
-        onlyNames.push(name);
-      }
-    });
-    //console.log(getNames);
-    return onlyNames;
-    
-  };
-//console.log(allData.'name');
+  // const getNames = (allData) => {
+  //   const names = allData.map((i) => i.name);
+  //   let onlyNames = [];
+  //   names.forEach((name) => {
+  //     if (allData.includes(name)) {
+  //       onlyNames.push(name);
+  //     }
+  //   });
+  //   //console.log(getNames);
+  //   return onlyNames;
+  // };
+
+//console.log(onlyNames);
+//console.log(allData.name);//undefined
+
+
+/*create element names*/
 
 const allNames = allData.map(element => element.name); //
-  const everyName = Array.from(new Set(allNames));
-  //console.log(everyNames);
+const everyName = Array.from(new Set(allNames));
+//console.log(everyName); //muestra todos los nombres de los champs
+
+const allImg = allData.map(element => element.img);
+const everyImg = Array.from(new Set(allImg));
+//console.log(everyImg)
+
+const tarjetas = document.getElementById("cards"); //id del div donde vamos a meter el p creado
+const divCards = document.createElement("p"); // el parrafo que estamos creando para meter la info
+tarjetas.appendChild(divCards); // creando un "p" al id "cards".
+divCards.innerHTML= everyName; // muestra los nombres en el p creado
+//divCards.innerHTML= everyImg;
+
+        
+/* filtrar por rol*/
 
 
-  function showCard(){
+document.querySelectorAll("input[name='cRol']").forEach((input) => {
+  input.addEventListener('change',() => {
+    if(input.checked){
+      const champs = filtrarPorRol(input.value, allData)
+      console.log(champs);
+    }
     
-  }
-
-
-const allCards = Array.from(new Set(allData));
-//console.log(allCards)
-
-divCards.innerHTML= allCards;
-
-//console.log(allCards);
-
+  })
+});
+//console.log(roles);// devuelve los assa
 
 function selectRol(){
   const rolChoice = document.getElementsByClassName("rButton");
@@ -70,15 +80,10 @@ function selectRol(){
   }
 }
 
-function rolefilter(allData, ){
-  
-} 
 
 
 
-let roles = allData.filter((campeon)=>{return campeon.tags.includes("Assassin")} ) 
-//console.log(roles);
-
+/*Mostrar y esconder info de campeón segun radio buton que el usuario seleccione*/
 
 const eventoClickAssassin = document.getElementById("assassin");
 eventoClickAssassin.addEventListener("click", mostrarAssassin,);
