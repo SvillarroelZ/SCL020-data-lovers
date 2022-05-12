@@ -17,9 +17,6 @@ const allChamp= Object.entries(allData).forEach(par =>{
   ////console.log(allData[valor])
 })
 
-
-
-
 const tarjetas = document.getElementById("cards"); //id del div donde vamos a meter el p creado
 const divCards = document.createElement("p"); // el parrafo que estamos creando para meter la info
 tarjetas.appendChild(divCards); // creando un "p" al id "cards".
