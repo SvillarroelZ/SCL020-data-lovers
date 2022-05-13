@@ -5,10 +5,15 @@ export const filtrarPorRol= (rolChoice, allData) =>{
    return roles
   }
 
+// export const DATA = (showAll, allData) =>{
+//   let dataAll = allData.filter((campeones)=>{return campeones.data.includes(showAll)})
+//   return dataAll
+// }
+
+
   // for(let i = 0; i < saveData.lenght; i++){
   //   console.log(saveData[i].tags);
   // }
-
 
 /*
 export const
