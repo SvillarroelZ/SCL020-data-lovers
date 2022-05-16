@@ -11,7 +11,9 @@ html{
     scroll-behavior: smooth;
 }
 
-::-webkit-scrollbar{ 
+
+
+/* ::-webkit-scrollbar{ 
     background: #111;
     width: 15px;
     
@@ -26,8 +28,44 @@ html{
     background: #b1aaa1 ;
     border-radius: 10px;
     border: #fff1db solid 1px ;
+} */
+::-webkit-scrollbar{ 
+    background: #C4C4C4;
+    width: 15px;
+    
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 10px #c9bfa9c0;
+    border-radius: 2px;
+    border: #eeeeee solid 1px;
 }
 
+::-webkit-scrollbar-thumb{
+    background: #000000 ;
+    border-radius: 6px;
+    height: 50px;
+    border: #C4C4C4 solid 2px ;
+    
+}
+
+
+body{
+    display: flex;
+    background-image: url(img/Rakan_img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    flex-direction: column;
+} 
+
+main{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/*     --     Navegación     --     */
 
 .nav{
     display: flex;
@@ -36,36 +74,40 @@ html{
     background-color: #252525;
     width: auto;
     height: 60px;
-    box-shadow: 0px 0px 60px #101010;
-    /* position:fixed; */
+    box-shadow: 0px 0px 60px #101010;   
+}
+
+.nav a{
+    text-decoration: none;
+    border-radius: 1px;
 }
 
 .riot{
     display: flex;
     justify-content: center;
-    align-items: center;
-    align-content: center;
-    width: 150px;
-    margin-left: 30px;
+    width: 100px;
+    margin-left: 45px;
 }
 
 .tittle{
+    display: flex;
+    justify-content: center;
+
     color: #DEC678;
     font-size: xx-large;
     font-style: unset;
-    justify-content: center;
     font-weight: 900;
-    text-shadow: 8px 2px 8px #101010;   
-    
+    text-shadow: 8px 2px 8px #101010;    
 }
 
 .play{
     display: flex;
     justify-content: center;
+
     align-items: center;
     width: 120px;
     height: 35px;
-    margin-right: 20px;
+    margin-right: 30px;
     
     font-size: large;
     font-weight: 600;
@@ -77,22 +119,10 @@ html{
     border-radius: 3px;
     box-shadow: 0px 0px 20px #101010;
 }
-.nav a{
-    text-decoration: none;
-    border-radius: 1px;
-}
 
- body{
-    display: flex;
-    background-image: url(/src/img/Rakan_img.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    flex-direction: column;
-} 
+/*     --     First Screen     --     */
 
-.videoButton-container{
+.container-firstScreen{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -102,41 +132,43 @@ html{
 
 .video{  
     /* border:#101010 solid 1px; */
-    width: 950px;
-    height: 688px;  
+    width: 1000px;
+    height: 700px;  
     /* margin-top: -90px; medidas en negativo */
-    margin-top: -50px;    
+    margin-top: -52px;    
 }
 
-.videoButton-container button{
+.container-firstScreen button{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 220px;
-    height: 45px;
     z-index: 2;
-    margin-top: 60px; /* aqui tambien hay negativo */
-    margin-bottom: 100px;
-     
-    background-color: #252525;
+    margin-top: 65px; 
+    margin-bottom: 100px;    
+
     border: #DEC678 inset 1px;
-    border-radius: 1px;
+    border-radius: 2px;
     box-shadow: 0px 0px 20px #101010;
-    text-shadow: 0.1em 0.1em 0.1em #111;
 }
 
-.url-boton{
-       
-    text-decoration: none;
-    color: #DEC678;
-    font-size: 22px;
-    font-weight: 400;
+.url-boton{       
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Radio Canada', ;   
-}
 
+    width: 220px;
+    height: 45px;;
+
+    background-color: #252525;
+
+    color: #ceb152;
+    text-decoration: none;
+    text-shadow: 1px 1px 10px rgb(2, 2, 2);
+    font-size: large;
+    font-weight: 600;
+    font-family: 'Radio Canada', sans-serif;
+    letter-spacing: 2px;
+}
 
 .logoLeague{
     margin-top: -500px;
@@ -146,182 +178,103 @@ html{
 
 .container-secondScreen{
     display: flex;
-    justify-content: left;
+    flex-direction: row;
+    justify-content: space-around;
     width: auto;
-    height: 1000px;
-    border: #B8B892 solid 2px ;
-    border-radius: 1.5%;
-    background-image: url(/src/img/backgroundPattern.png);
+    height: 662px;
+    border: #B8B892 inset 1px ;
+    background-image: url(img/backgroundPattern.png);
     background-color: whitesmoke;
+    padding: 50px;
+}
+
+
+/*       --   BTN ROLES CARDS-DIV     --     */
+
+.roles-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 662px;
+    border: blue 3px solid;
+
+}
+
+.btnShow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    
+}
+
+.btnShow button{
+    
+    width: auto;
+    height: auto;
+    margin-right: 50px;
+    padding: 0px 25px;
+
+    text-align: center;
+    letter-spacing: 5px;
+    color: #6E5B5B;
+    
+
+    border: #A88B47 solid 3px;
+    border-radius: 2px;
+    background-color: transparent;
+
+    
+    box-shadow:  inset 1px 0.5px 15px #e2d9c2;  
+
 }
 
 .container-roles{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-
-    width: 50%;
-    margin: 6%; 
-}
-
-.rButton{
-    display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    
+    width: 100%;
+    
+    border: red solid 3px;
 }
 
 .sub-cont-rol{
     display: flex;
     flex-direction: column-reverse;
-    justify-content:flex-end;
+    justify-content: space-between;
     
-    align-items: baseline;
-    margin: 2%; 
-    margin-top: 7%;
-}
-.dotFrame{
-    width: auto;
-    height: 395px;
-    position: absolute;
-    opacity: 15%;
-    margin: 50px 15px;
-}
-
-.circleFrame{
-    width: auto;
-    height: 420px;
-    position: absolute;
-    margin: 50px 15px;
-}
-
-.btnChamps{
-    width: auto;
-    height: 50px;
-}
-
-
-/*     --     texto champs    -    */
-
-.tittleRol{
-    text-align: center;
-    margin-right: 16%;
-    text-decoration: double;
-}
-
-.textRol{
-    text-align: center;
-    margin: 5% 10% 10% 10%;
-    padding-right: 18%;
-}
-
-
-.akali {
-    width: auto;
-    height: 470px;
-}
-.yasuo {
-    width: auto;
-    height: 470px;
-}
-.jinx {
-    width: auto;
-    height: 470px;  
-}
-.lux {
-    width: auto;
-    height: 470px;
-}
-.leona {
-    width: auto;
-    height: 470px;
-
-}
-.thresh {
-    width: auto;
-    height: 470px; 
-}
-
-#div-assassin{
-    display:none;
-    position: absolute;z-index:2;   
-}
-#div-fighter{
-    display:none;
-    position: absolute;z-index:2;
-}
-#div-mage{
-    display:none;
-    position: absolute;z-index:2;
-}
-#div-marksman{
-    display:none;
-    position: absolute;z-index:2;
-}
-#div-support{
-    display:none;
-    position: absolute;z-index:2;
-}
-#div-tank{
-    display:none;
-    position: absolute;z-index:2;
-}
-
-
-/*     --     FOOTER     --     */
-
-footer{
-    display: flex;
-    flex-direction: row;
-    justify-content:space-between;
     align-items: center;
+    margin: 5px;
+    padding: 20px;
     
-    width: auto;
-    height: 60px;
-    background-color: #252525;
-    margin-top: 2px; 
-    padding: 5px;
-    border-radius: 2%;
-
 }
 
-.logoLOL {
-    display: flex;
-    width: auto;
-    height: 50px;;
-    margin-left: 30px;
-}
-
-.logoRiot{
-    display: flex;
-    width: auto;
-    height: 50px;
-}
-
-.cont-logos{
-    display: flex;
-    align-items: center;  
-    margin-right: 20px; 
-     
-}
-
-.logoRS1{
-    width: 55px;
-    height: 55px;
-    margin-top: 8px;   
-}
-
-.logoRS2{
-    width: 55px;
-    height: 55px;
-    margin-top: 8px;
-}
-
+.rButton{
+    border: #6E5B5B solid 3px;
+} 
 
 .contDiv{
     display:flex;
     flex-direction: column;
-    height: 160px;
-    width: 500px;
+    justify-content: center;
+    height: 400px;
+    width: 600px;
 }
+
+ #cards{
+    display: none;
+    overflow: auto;
+    direction: rtl;
+    height: 560px;
+    width: 600px;
+
+       
+
+} 
 
 .div0{
     display: flex;
@@ -372,28 +325,28 @@ footer{
 .div3{
     display: flex;
     justify-content: left;
-    width: 100%;
+    width: 250px;
     height: 30%;
-    text-align: left;
     align-items: center;
     
 }
+
 .div3 h3 {
-    width: auto;
-    height: 30px;
+    width: 257px;
+    height: 41.99px;
     background-color: #3f3f3f;
-    color: #ffffff;
+    color: #ffd900;
     border-radius: 2px;
-    z-index: 0;
-    text-align: left;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    z-index: 1;
 }
 
 .div4{
     display:flex;
     align-items: center;
     flex-direction: column;
-
-    border: red solid 2px;
 
     width: 257px;
     height: 118px; 
@@ -407,17 +360,10 @@ footer{
     border-radius: 1px;
     text-align: left;
     margin: 2px;
-    z-index: 3;
+    z-index: 2;
     
 }
 
-.nameCard{
-    height: 41.99px;
-    width: auto;
-    margin: 2px;
-    align-items: center;
-    text-align: center;
-}
 
 /* .infoCard{
     width: auto;
@@ -480,4 +426,161 @@ footer{
     letter-spacing: 1.8px;
     background-color: #3f3f3f;
     color: #ffffff;
+}
+
+/*     -- FRAMES - ROL    --     */
+
+.framesRol-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 40%;
+    height: 662px;
+    border: blue 3px solid;
+    
+}
+
+.frames{}
+.dotFrame{
+    width: auto;
+    height: 350px;
+    position: absolute;
+    opacity: 15%;
+    
+}
+
+.circleFrame{
+    width: auto;
+    height: 372px;
+    position: absolute;
+    
+}
+
+/*     --     IMG CHAMPS RBUTTON     --    */
+.roleDiv{
+    display: flex;
+    position: absolute;
+    align-items: right;
+}
+
+.akali {
+    width: auto;
+    height: 470px;
+}
+.yasuo {
+    width: auto;
+    height: 470px;
+}
+.jinx {
+    width: auto;
+    height: 470px;  
+}
+.lux {
+    width: auto;
+    height: 470px;
+}
+.leona {
+    width: auto;
+    height: 470px;
+
+}
+.thresh {
+    width: auto;
+    height: 470px; 
+}
+
+#div-assassin{
+    display:none;
+    position: absolute;z-index:2;   
+}
+#div-fighter{
+    display:none;
+    position: absolute;z-index:2;
+}
+#div-mage{
+    display:none;
+    position: absolute;z-index:2;
+}
+#div-marksman{
+    display:none;
+    position: absolute;z-index:2;
+}
+#div-support{
+    display:none;
+    position: absolute;z-index:2;
+}
+#div-tank{
+    display:none;
+    position: absolute;z-index:2;
+}
+
+
+/*     --     INFO CHAMPS    -    */
+
+.tittleRol{
+    border: green solid 1px;
+    text-align: center;    
+    text-decoration: double;
+    width: auto;
+    height: 10%;
+}
+
+.textRol{
+    
+    width: auto;
+    height: 40%;
+    text-align: center;
+    margin: 5% 10% 10% 10%;
+    
+}
+
+
+
+/*     --     FOOTER     --     */
+
+footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    height: 60px;
+    background-color: #252525;
+    margin-top: 2px; 
+    padding: 5px;
+    border-radius: 2%;
+
+}
+
+.logoLOL {
+    display: flex;
+    width: auto;
+    height: 50px;;
+    margin-left: 30px;
+}
+
+.logoRiot{
+    display: flex;
+    width: auto;
+    height: 50px;
+}
+
+.cont-logos{
+    display: flex;
+    align-items: center;  
+    margin-right: 20px; 
+     
+}
+
+.logoRS1{
+    width: 55px;
+    height: 55px;
+    margin-top: 8px;   
+}
+
+.logoRS2{
+    width: 55px;
+    height: 55px;
+    margin-top: 8px;
 }

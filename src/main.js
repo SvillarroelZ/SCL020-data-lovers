@@ -10,6 +10,12 @@ const allData = Object.values(saveData.data); // toda la data como array| const 
 //console.log(allData[0].info);// toda la info de la primera posicion
 //console.log(allData.name);//undefined
 
+const element = document.getElementById("showBtn");
+element.addEventListener("click", mostrar);
+
+function mostrar() {
+  document.getElementById("cards").style.display = "block";
+}
 /*
 -Acceder a la data como array para poder iterar sobre ella
 -Almacenar solo cierta parte de esa data en variables (nombres en una constante, hay que hacer lo mismo con names, tags, img, splash, info, difficulty)
@@ -44,10 +50,11 @@ const allData = Object.values(saveData.data); // toda la data como array| const 
 
 //const tarjetas = document.getElementById("cards"); //id del div donde vamos a meter el p creado
 // const divCards = document.createElement("p"); // el parrafo que estamos creando para meter la info
-// tarjetas.appendChild(divCards); // creando un "p" al id "cards".
+//tarjetas.appendChild(divCards); // creando un "p" al id "cards".
 // divCards.innerHTML= everyName; // muestra los nombres en el p creado
 
 const showCards = () => {
+
     for(let i=0; i<allData.length; i++){
   
     let div0 = document.getElementById("cards");
@@ -73,7 +80,7 @@ const showCards = () => {
     let div3 = document.createElement("div");
     div2.appendChild(div3);
     div3.setAttribute("class", "div3");
- 
+
     let image = document.createElement("img");
     div3.appendChild(image);
     image.src = allData[i].img;
@@ -88,7 +95,7 @@ const showCards = () => {
     div2.appendChild(div4);
     div4.setAttribute("class", "div4");
 
-    let info = document.createElement("p");
+    //let info = document.createElement("p");
     //div4.appendChild(info);
     //info.innerHTML=allData[i].name.info;
     //info.setAttribute("class", "infoCard");  
@@ -112,15 +119,15 @@ const showCards = () => {
     div4.appendChild(diff);
     diff.innerHTML = `Dificultad: ${allData[i].info.difficulty}`;
     diff.setAttribute("class", "diffCard")  
-    
+    console.log("cards")
   }
 }
-showCards();
+showCards();       
 
-        
 /* filtrar por rol*/
 
-document.querySelectorAll("input[name='cRol']").forEach((input) => {
+
+let selectRoles= document.querySelectorAll("input[name='cRol']").forEach((input) => {
   input.addEventListener('change',() => {
     if(input.checked){
       const champs = filtrarPorRol(input.value, allData)
@@ -130,19 +137,22 @@ document.querySelectorAll("input[name='cRol']").forEach((input) => {
   })
 });
 
+
 //console.log(roles);// devuelve los assa
 
-function selectRol(){
-  const rolChoice = document.getElementsByClassName("rButton");
-  let dataRolChoice = [];
+// function selectRol(){
+//   const rolChoice = document.getElementsByClassName("rButton");
+//   let dataRolChoice = [];
 
-  for(let i=0; i< rolChoice.length; i++){
-    if (rolChoice[i] == true){
-      dataRolChoice.push(rolChoice[i]);
-    }
-  }
-}
+//   for(let i=0; i< rolChoice.length; i++){
+//     if (rolChoice[i] == true){
+//       dataRolChoice.push(rolChoice[i]);
+//     }
+//   }
+// }
 
+
+/* */
 // function btnShowAll(){
 //   const showAll = document.getElementById("btnSA");
 //   let dataShowAll=[];
