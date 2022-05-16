@@ -395,11 +395,14 @@ footer{
 }
 
 .div4{
-    display: flex;
-    flex-direction: column;
+    display:flex;
     align-items: center;
-    width: auto;
-    height: 70%; 
+    flex-direction: column;
+
+    border: red solid 2px;
+
+    width: 257px;
+    height: 118px; 
 }
 
 
@@ -422,9 +425,53 @@ footer{
     text-align: center;
 }
 
-.infoCard{
+/* .infoCard{
     width: auto;
     height: 80px;
+} */
+
+/*info-cards*/
+
+.attackCard{
+    width: 250px;
+    height: 25px;
+    text-align: left;
+    font-weight: normal;
+
+    border-radius: 2px;
+    margin: 1.5px;
+    
+    letter-spacing: 1.8px;
+    background-color: #3f3f3f;
+    color: #ffffff;
+}
+
+.defenseCard{
+    width: 250px;
+    height: 25px;
+    text-align: left;
+    font-weight: normal;
+
+    border-radius: 2px;
+    margin: 1.5px;
+    
+    letter-spacing: 1.8px;
+    background-color: #3f3f3f;
+    color: #ffffff;
+}
+
+.magicCard{
+    width: 250px;
+    height: 25px;
+    text-align: left;
+    font-weight: normal;
+
+    border-radius: 2px;
+    margin: 1.5px;
+    
+    letter-spacing: 1.8px;
+    background-color: #3f3f3f;
+    color: #ffffff;
 }
 
 .diffCard{
@@ -434,6 +481,7 @@ footer{
     font-weight: normal;
 
     border-radius: 2px;
+    margin: 1.5px;
     
     letter-spacing: 1.8px;
     background-color: #3f3f3f;
