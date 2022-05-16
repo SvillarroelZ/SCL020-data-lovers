@@ -89,13 +89,28 @@ const showCards = () => {
     div4.setAttribute("class", "div4");
 
     let info = document.createElement("p");
-    div4.appendChild(info);
-    info.innerHTML=allData[i].name.info;
-    info.setAttribute("class", "infoCard");  
+    //div4.appendChild(info);
+    //info.innerHTML=allData[i].name.info;
+    //info.setAttribute("class", "infoCard");  
+
+    let attack = document.createElement("p");
+    div4.appendChild(attack);
+    attack.innerHTML=`Ataque: ${allData[i].info.attack}`;
+    attack.setAttribute("class", "attackCard");  
+
+    let defense = document.createElement("p");
+    div4.appendChild(defense);
+    defense.innerHTML=`Defensa: ${allData[i].info.defense}`;
+    defense.setAttribute("class", "defenseCard");  
+
+    let magic = document.createElement("p");
+    div4.appendChild(magic);
+    magic.innerHTML=`Magia: ${allData[i].info.magic}`;
+    magic.setAttribute("class", "magicCard");  
 
     let diff = document.createElement("p");
     div4.appendChild(diff);
-    diff.innerHTML = `Dificultad: ${allData[i].info.difficulty}`
+    diff.innerHTML = `Dificultad: ${allData[i].info.difficulty}`;
     diff.setAttribute("class", "diffCard")  
     
   }
