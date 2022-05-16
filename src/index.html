@@ -10,87 +10,125 @@
   </head>
 
   <body>
+
     <div id="root"></div>
+
     <header class="nav">
       <a href="https://www.riotgames.com/es"><img class="riot" src="img/logo-rito-gris.png"></a>
       <p class="tittle">PORO CHAMP</p>
       <a href="https://signup.las.leagueoflegends.com/es/signup/index#/"><p class="play">JUEGA</p></a>
     </header>
-    <div class="videoButton-container">  
+
+    <div class="container-firstScreen">  
+
       <video class="video" autoplay loop muted >
         <source src="img/Ornn, the Fire below the Mountain _ Login Screen - League of Legends (1080p_25fps_H264-128kbit_AAC).mp4" type="video/mp4">
       </video>
+
       <img class="logoLeague" src="img/Logo_League-of-Legends.png" alt="leagueOfLegends"> 
+      
       <button>
         <a class="url-boton" href="#section2">INICIA</a>
       </button>
+
     </div>
-    <div >
-      <button type="button" id="showBtn">Mostrar todos</button>
-      <button id=btnSA type="button">Ordenar por dificultad</button>
-      <input type="text"></input>
-    </div>
-    <div class="container-secondScreen" id="section2">
-      <div class="container-roles">
-        <label class="sub-cont-rol"><input class="rButton" type="radio" name="cRol" id="assassin" value="Assassin">Asesino<img src="img/all-rol-logo/assa-logo.png" alt="Asesino"></label>
-        <label class="sub-cont-rol"><input class="rButton" type="radio" name="cRol" id="fighter" value="Fighter">Luchador<img src="img/all-rol-logo/fight-logo.png" alt="Luchador"></label>
-        <label class="sub-cont-rol"><input class="rButton" type="radio" name="cRol" id="mage" value="Mage">Mago<img src="img/all-rol-logo/mage-logo.png"alt="Mago"></label>
-        <label class="sub-cont-rol"><input class="rButton" type="radio" name="cRol" id="marksman" value="Marksman">Tirador<img src="img/all-rol-logo/mark-logo.png" alt="Tirador"></label>
-        <label class="sub-cont-rol"><input class="rButton" type="radio" name="cRol" id="support" value="Support">Soporte<img src="img/all-rol-logo/sup-logo.png" alt="Support"></label>
-        <label class="sub-cont-rol"><input class="rButton" type="radio" name="cRol" id="tank" value="Tank">Tanque<img src="img/all-rol-logo/tank-logo.png"  alt="Tanque"></label>
-      </div>
-      <div class="roleDiv">   
-          <div id="div-assassin">
-            <img class="akali" src="img/champs/akali-ass.png">
-            <h3 class="tittleRol">Asesino</h3>
-            <p class="textRol" >Son campeones especializados en matar o desestabilizar objetivos de alto valor estratégico. Son cazadores oportunistas que buscan el momento favorable antes de entrar al combate aprovechando sobretodo su capacidad de movimiento.</p>
+
+    <main>
+
+      <div class="container-secondScreen" id="section2">
+
+        <div class="roles-div">
+  
+          <div class="btnShow">
+            <button type="button" id="showBtn">Mostrar todos</button>
+            <button type="button" id=btnSA >Ordenar por dificultad</button>
+            <!-- <input type="text"></input> -->
           </div>
-          <div id="div-fighter">
-            <img class="yasuo" src="img/champs/yasuo-figh.png">
-            <h3 class="tittleRol">Luchador</h3>
-            <p class="textRol" >Son un grupo diverso de combatientes de corto alcance que sobresalen tanto causando como resistiendo daño.</p>
+  
+          <div class="container-roles">
+            <label class="sub-cont-rol"><input class="rButton" type="radio" name="cRol" id="assassin" value="Assassin">Asesino<img src="img/all-rol-logo/assa-logo.png" alt="Asesino"></label>
+            <label class="sub-cont-rol"><input class="rButton" type="radio" name="cRol" id="fighter" value="Fighter">Luchador<img src="img/all-rol-logo/fight-logo.png" alt="Luchador"></label>
+            <label class="sub-cont-rol"><input class="rButton" type="radio" name="cRol" id="mage" value="Mage">Mago<img src="img/all-rol-logo/mage-logo.png"alt="Mago"></label>
+            <label class="sub-cont-rol"><input class="rButton" type="radio" name="cRol" id="marksman" value="Marksman">Tirador<img src="img/all-rol-logo/mark-logo.png" alt="Tirador"></label>
+            <label class="sub-cont-rol"><input class="rButton" type="radio" name="cRol" id="support" value="Support">Soporte<img src="img/all-rol-logo/sup-logo.png" alt="Support"></label>
+            <label class="sub-cont-rol"><input class="rButton" type="radio" name="cRol" id="tank" value="Tank">Tanque<img src="img/all-rol-logo/tank-logo.png"  alt="Tanque"></label>
           </div>
-          <div id="div-mage">
-            <img class="lux" src="img/champs/lux-mag.png">
-            <h3 class="tittleRol">Mago</h3>
-            <p class="textRol" >Por lo general son campeones a distancia que priorizan habilidades, hechizos de larga distancia y AoE (área de efecto) poderosos por sobre sus ataques básicos.</p>
-          </div>
-          <div id="div-marksman">
-            <img class="jinx" src="img/champs/jinx-mark.png">
-            <h3 class="tittleRol">Tirador</h3>
-            <p class="textRol" >Los tiradores son campeones que atacan a distancia, sacrifican su defensa para usar ataques que ayudan al equipo a eliminar rapidamente a los rivales.</p>
-          </div>
-          <div id="div-support">
-            <img class="thresh" src="img/champs/thresh-sup.png">
-            <h3 class="tittleRol">Soporte</h3>
-            <p class="textRol" >Son campeones que se encargan de apoyar a sus compañeros de equipo mediante bonificaciones, curaciones, escudos, inmovilizaciones a los enemigos y cualquier otro control de masas existente.</p>
-          </div>
-          <div id="div-tank">
-            <img class="leona" src="img/champs/leona-tank.png">
-            <h3 class="tittleRol">Tanque</h3>
-            <p class="textRol" >Los Tanques son campeones de combate cuerpo a cuerpo que sacrifican el daño a cambio de un poderoso control de masas y resistiendo oportunamente el daño generado por el equipo contrario.</p>
-          </div>
+  
+          <div class="contDiv"> 
+            <p>HOLA</p>
+            <div id= "cards"> </div>  
+          </div> 
+  
+        </div>
+  
+        <div class="framesRol-div">
+  
           <div class="frames">
             <img class="circleFrame" src= "img/circleFrame.png" alt="circleFrame">
             <img class="dotFrame" src= "img/black-dot.gif" alt="dotFrame"> 
           </div>
-          <div class="contDiv"> 
-          </div>  
-          <div id= "cards">
-          </div>
-    </div>              
+  
+          <div class="roleDiv">   
+          
+            <div id="div-assassin">
+              <img class="akali" src="img/champs/akali-ass.png">
+              <h3 class="tittleRol">Asesino</h3>
+              <p class="textRol" >Son campeones especializados en matar o desestabilizar objetivos de alto valor estratégico. Son cazadores oportunistas que buscan el momento favorable antes de entrar al combate aprovechando sobretodo su capacidad de movimiento.</p>
+            </div>
+  
+            <div id="div-fighter">
+              <img class="yasuo" src="img/champs/yasuo-figh.png">
+              <h3 class="tittleRol">Luchador</h3>
+              <p class="textRol" >Son un grupo diverso de combatientes de corto alcance que sobresalen tanto causando como resistiendo daño.</p>
+            </div>
+  
+            <div id="div-mage">
+              <img class="lux" src="img/champs/lux-mag.png">
+              <h3 class="tittleRol">Mago</h3>
+              <p class="textRol" >Por lo general son campeones a distancia que priorizan habilidades, hechizos de larga distancia y AoE (área de efecto) poderosos por sobre sus ataques básicos.</p>
+            </div>
+  
+            <div id="div-marksman">
+              <img class="jinx" src="img/champs/jinx-mark.png">
+              <h3 class="tittleRol">Tirador</h3>
+              <p class="textRol" >Los tiradores son campeones que atacan a distancia, sacrifican su defensa para usar ataques que ayudan al equipo a eliminar rapidamente a los rivales.</p>
+            </div>
+  
+            <div id="div-support">
+              <img class="thresh" src="img/champs/thresh-sup.png">
+              <h3 class="tittleRol">Soporte</h3>
+              <p class="textRol" >Son campeones que se encargan de apoyar a sus compañeros de equipo mediante bonificaciones, curaciones, escudos, inmovilizaciones a los enemigos y cualquier otro control de masas existente.</p>
+            </div>
+  
+            <div id="div-tank">
+              <img class="leona" src="img/champs/leona-tank.png">
+              <h3 class="tittleRol">Tanque</h3>
+              <p class="textRol" >Los Tanques son campeones de combate cuerpo a cuerpo que sacrifican el daño a cambio de un poderoso control de masas y resistiendo oportunamente el daño generado por el equipo contrario.</p>
+            </div>
+  
+        </div>
+              
+      </div>       
+      
+    </main>
     <footer>
-      <div>
-        <a href="https://www.leagueoflegends.com/es-mx/"><img class="logoLOL" src="img/Logo_LOL.png"></a>
-      </div>
-      <div>
-        <a href="https://www.riotgames.com/es"><img class="logoRiot" src="img/logo-rito-gris.png" alt="RiotGames"></a>
-      </div>      
-      <div class="cont-logos">
-        <a href="https://www.youtube.com/c/leagueoflegends"><img class="logoRS1" src="img/Logo_YouTube.png" alt="YouTubeLOL"></a>
-        <a href="https://twitter.com/LeagueOfLegends"><img class="logoRS2" src="img/Logo_Twitter.png" alt="TwitterLOL"></a>
-      </div>  
-    </footer>
+
+        <div>
+          <a href="https://www.leagueoflegends.com/es-mx/"><img class="logoLOL" src="img/Logo_LOL.png"></a>
+        </div>
+    
+        <div>
+          <a href="https://www.riotgames.com/es"><img class="logoRiot" src="img/logo-rito-gris.png" alt="RiotGames"></a>
+        </div>    
+    
+        <div class="cont-logos">
+          <a href="https://www.youtube.com/c/leagueoflegends"><img class="logoRS1" src="img/Logo_YouTube.png" alt="YouTubeLOL"></a>
+          <a href="https://twitter.com/LeagueOfLegends"><img class="logoRS2" src="img/Logo_Twitter.png" alt="TwitterLOL"></a>
+        </div> 
+    
+    </footer>   
+
+    
     <script src="main.js" type="module"></script>
 
   </body>

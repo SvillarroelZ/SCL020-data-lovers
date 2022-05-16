@@ -9,6 +9,7 @@ const allData = Object.values(saveData.data); // toda la data como array| const 
 //console.log(allData[i]) // imprime el primer objeto, de posicion 0 dentro del array allData
 //console.log(allData[0].info);// toda la info de la primera posicion
 //console.log(allData.name);//undefined
+
 const element = document.getElementById("showBtn");
 element.addEventListener("click", mostrar);
 
@@ -53,6 +54,7 @@ function mostrar() {
 // divCards.innerHTML= everyName; // muestra los nombres en el p creado
 
 const showCards = () => {
+
     for(let i=0; i<allData.length; i++){
   
     let div0 = document.getElementById("cards");
@@ -93,7 +95,7 @@ const showCards = () => {
     div2.appendChild(div4);
     div4.setAttribute("class", "div4");
 
-    let info = document.createElement("p");
+    //let info = document.createElement("p");
     //div4.appendChild(info);
     //info.innerHTML=allData[i].name.info;
     //info.setAttribute("class", "infoCard");  
@@ -117,14 +119,15 @@ const showCards = () => {
     div4.appendChild(diff);
     diff.innerHTML = `Dificultad: ${allData[i].info.difficulty}`;
     diff.setAttribute("class", "diffCard")  
-    
+    console.log("cards")
   }
 }
 showCards();       
+
 /* filtrar por rol*/
 
 
-document.querySelectorAll("input[name='cRol']").forEach((input) => {
+let selectRoles= document.querySelectorAll("input[name='cRol']").forEach((input) => {
   input.addEventListener('change',() => {
     if(input.checked){
       const champs = filtrarPorRol(input.value, allData)
@@ -134,19 +137,22 @@ document.querySelectorAll("input[name='cRol']").forEach((input) => {
   })
 });
 
+
 //console.log(roles);// devuelve los assa
 
-function selectRol(){
-  const rolChoice = document.getElementsByClassName("rButton");
-  let dataRolChoice = [];
+// function selectRol(){
+//   const rolChoice = document.getElementsByClassName("rButton");
+//   let dataRolChoice = [];
 
-  for(let i=0; i< rolChoice.length; i++){
-    if (rolChoice[i] == true){
-      dataRolChoice.push(rolChoice[i]);
-    }
-  }
-}
+//   for(let i=0; i< rolChoice.length; i++){
+//     if (rolChoice[i] == true){
+//       dataRolChoice.push(rolChoice[i]);
+//     }
+//   }
+// }
 
+
+/* */
 // function btnShowAll(){
 //   const showAll = document.getElementById("btnSA");
 //   let dataShowAll=[];
