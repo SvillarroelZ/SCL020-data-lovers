@@ -84,7 +84,7 @@ html{
 
  body{
     display: flex;
-    background-image: url(/src/img/Rakan_img.jpg);
+    background-image: url(img/Rakan_img.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -125,8 +125,7 @@ html{
     text-shadow: 0.1em 0.1em 0.1em #111;
 }
 
-.url-boton{
-       
+.url-boton{       
     text-decoration: none;
     color: #DEC678;
     font-size: 22px;
@@ -148,13 +147,16 @@ html{
     display: flex;
     justify-content: left;
     width: auto;
-    height: 1000px;
+    height: auto;
     border: #B8B892 solid 2px ;
     border-radius: 1.5%;
-    background-image: url(/src/img/backgroundPattern.png);
+    background-image: url(img/backgroundPattern.png);
     background-color: whitesmoke;
 }
 
+#cards{
+    display: none;
+}
 .container-roles{
     display: flex;
     flex-direction: row;
@@ -197,7 +199,11 @@ html{
     width: auto;
     height: 50px;
 }
-
+.roleDiv{
+    display: flex;
+    position: absolute;
+    align-items: right;
+}
 
 /*     --     texto champs    -    */
 
