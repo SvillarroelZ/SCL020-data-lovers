@@ -1,8 +1,8 @@
 export const getData = (data) => {
 };
-export const filtrarPorRol= (rolChoice, allData) =>{
+export const filterByRole= (rolChoice, allData) =>{
     let roles = allData.filter((campeon)=>{return campeon.tags.includes(rolChoice)} )
-   return roles
+    return roles
   }
 
 // export const DATA = (showAll, allData) =>{
