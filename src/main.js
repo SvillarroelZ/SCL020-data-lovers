@@ -16,6 +16,7 @@ element.addEventListener("click", mostrar);
 function mostrar() {
   document.getElementById("cards").style.display = "block";
 }
+
 /*
 -Acceder a la data como array para poder iterar sobre ella
 -Almacenar solo cierta parte de esa data en variables (nombres en una constante, hay que hacer lo mismo con names, tags, img, splash, info, difficulty)
@@ -132,24 +133,26 @@ let selectRoles= document.querySelectorAll("input[name='cRol']").forEach((input)
     if(input.checked){
       const champs = filtrarPorRol(input.value, allData)
       console.log(champs);
+
     }
     
   })
 });
 
 
-//console.log(roles);// devuelve los assa
+//console.log(roles);// devuelve los assassin
 
-// function selectRol(){
-//   const rolChoice = document.getElementsByClassName("rButton");
-//   let dataRolChoice = [];
+function selectRol(){
+  const rolChoice = document.getElementsByClassName("rButton");
+  let dataRolChoice = [];
 
-//   for(let i=0; i< rolChoice.length; i++){
-//     if (rolChoice[i] == true){
-//       dataRolChoice.push(rolChoice[i]);
-//     }
-//   }
-// }
+  for(let i=0; i< rolChoice.length; i++){
+    if (rolChoice[i] == true){
+      dataRolChoice.push(rolChoice[i]);
+      console.log(dataRolChoice)
+    }
+  }
+}
 
 
 /* */
