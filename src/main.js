@@ -10,9 +10,11 @@ const allData = Object.values(saveData.data); // toda la data como array| const 
 //console.log(allData[0].info);// toda la info de la primera posicion
 //console.log(allData.name);//undefined
 
+/* Funcion mostrar ordenado según dificultad */ 
 
+/* Mostrar todas las tarjetas en el botón "mostrar todos" */
 
-const element = document.getElementById("showBtn");//funcion del boton mostrar todos
+const element = document.getElementById("showBtn"); //funcion del boton mostrar todos
 element.addEventListener("click", showAll);
 
 function showAll() {
@@ -28,7 +30,7 @@ function showByRole(role) {
   
   document.getElementById("cards").style.display = "block"; // muestra todas las tarjetas
   Array.from(document.querySelectorAll(".div0")) // Muestra los elementos de la clase div0 con el tag que coincide con uno de los roles.
-  .filter(element => element.attributes.getNamedItem("tags").value.includes(role))
+  .filter(element => element.attributes.getNamedItem("tags").value.includes(role)) // getNamedItem(); método que devuelve un atributo del nodo desde el objeto
   .forEach(element => element.style.display = "flex")
 
   Array.from(document.querySelectorAll(".div0")) // Esconde los elementos del div que no coinciden con los roles indicados.
