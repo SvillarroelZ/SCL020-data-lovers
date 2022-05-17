@@ -1,4 +1,4 @@
-import { getData, filtrarPorRol} from './data.js';
+import { getData, filterByRole} from './data.js';
 import data from "./data/lol/lol.js";
 //console.log(data.data) // muestra todos los objetos por nombre de cada campeon
 //getData(data);//que hace esto?
@@ -10,11 +10,30 @@ const allData = Object.values(saveData.data); // toda la data como array| const 
 //console.log(allData[0].info);// toda la info de la primera posicion
 //console.log(allData.name);//undefined
 
-const element = document.getElementById("showBtn");
-element.addEventListener("click", mostrar);
 
-function mostrar() {
-  document.getElementById("cards").style.display = "block";
+
+const element = document.getElementById("showBtn");//funcion del boton mostrar todos
+element.addEventListener("click", showAll);
+
+function showAll() {
+document.getElementById("cards").style.display = "block";
+}
+
+/**
+ * Muestra las tarjetas correspondientes al rol
+ * 
+ *role para filtrar las tarjetas
+ */
+function showByRole(role) {
+  
+  document.getElementById("cards").style.display = "block"; // muestra todas las tarjetas
+  Array.from(document.querySelectorAll(".div0")) // Muestra los elementos de la clase div0 con el tag que coincide con uno de los roles.
+  .filter(element => element.attributes.getNamedItem("tags").value.includes(role))
+  .forEach(element => element.style.display = "flex")
+
+  Array.from(document.querySelectorAll(".div0")) // Esconde los elementos del div que no coinciden con los roles indicados.
+  .filter(element => !element.attributes.getNamedItem("tags").value.includes(role))
+  .forEach(element => element.style.display = "none")
 }
 
 /*
@@ -61,10 +80,10 @@ const showCards = () => {
     let div0 = document.getElementById("cards");
     let divCards0 = document.createElement("div");
     div0.appendChild(divCards0);
-    divCards0.setAttribute("class", "div0");
+    divCards0.setAttribute("class", "div0"); //div0 es el contenedor de la tarjeta
+    divCards0.setAttribute("tags", allData[i].tags); //Unimos los roles a la tarjeta
 
-    //let div1 = document.getElementById("cards");
-    let div1 = document.createElement("div");
+    let div1 = document.createElement("div");//creamos el div para el img splash
     divCards0.appendChild(div1);
     div1.setAttribute("class", "div1");
 
@@ -73,12 +92,11 @@ const showCards = () => {
     splash.src = allData[i].splash;
     splash.setAttribute("class", "splashCard");  
     
-    //let div2 = document.getElementById("cards");
-    let div2 = document.createElement("div");
+    let div2 = document.createElement("div");//contenedor de img icono titulo e info
     divCards0.appendChild(div2);
     div2.setAttribute("class", "div2");
 
-    let div3 = document.createElement("div");
+    let div3 = document.createElement("div");//contenedor de img icono y titulo
     div2.appendChild(div3);
     div3.setAttribute("class", "div3");
 
@@ -92,14 +110,9 @@ const showCards = () => {
     names.innerHTML =allData[i].name;
     names.setAttribute("class", "nameCard");  
 
-    let div4 = document.createElement("div");
+    let div4 = document.createElement("div");// Contenedor de info
     div2.appendChild(div4);
     div4.setAttribute("class", "div4");
-
-    //let info = document.createElement("p");
-    //div4.appendChild(info);
-    //info.innerHTML=allData[i].name.info;
-    //info.setAttribute("class", "infoCard");  
 
     let attack = document.createElement("p");
     div4.appendChild(attack);
@@ -120,7 +133,7 @@ const showCards = () => {
     div4.appendChild(diff);
     diff.innerHTML = `Dificultad: ${allData[i].info.difficulty}`;
     diff.setAttribute("class", "diffCard")  
-    console.log("cards")
+    //console.log("cards")
   }
 }
 showCards();       
@@ -131,9 +144,10 @@ showCards();
 let selectRoles= document.querySelectorAll("input[name='cRol']").forEach((input) => {
   input.addEventListener('change',() => {
     if(input.checked){
-      const champs = filtrarPorRol(input.value, allData)
-      console.log(champs);
-
+      //console.log(input.value);
+      const champs = filterByRole(input.value, allData)
+      //console.log(champs);
+      showByRole(input.value);
     }
     
   })
@@ -142,17 +156,17 @@ let selectRoles= document.querySelectorAll("input[name='cRol']").forEach((input)
 
 //console.log(roles);// devuelve los assassin
 
-function selectRol(){
-  const rolChoice = document.getElementsByClassName("rButton");
-  let dataRolChoice = [];
+// function selectRol(){
+//   const rolChoice = document.getElementsByClassName("rButton");
+//   let dataRolChoice = [];
 
-  for(let i=0; i< rolChoice.length; i++){
-    if (rolChoice[i] == true){
-      dataRolChoice.push(rolChoice[i]);
-      console.log(dataRolChoice)
-    }
-  }
-}
+//   for(let i=0; i< rolChoice.length; i++){
+//     if (rolChoice[i] == true){
+//       dataRolChoice.push(rolChoice[i]);
+//       console.log(dataRolChoice)
+//     }
+//   }
+// }
 
 
 /* */
