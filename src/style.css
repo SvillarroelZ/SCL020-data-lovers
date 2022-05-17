@@ -199,7 +199,6 @@ main{
     width: 60%;
     height: 662px;
     border: blue 3px solid;
-
 }
 
 .btnShow{
@@ -208,7 +207,6 @@ main{
     align-items: center;
     width: 100%;
     height: 200px;
-    
 }
 
 .btnShow button{
@@ -229,7 +227,6 @@ main{
 
     
     box-shadow:  inset 1px 0.5px 15px #e2d9c2;  
-
 }
 
 .container-roles{
@@ -250,7 +247,6 @@ main{
     align-items: center;
     margin: 5px;
     padding: 20px;
-    
 }
 
 .rButton{
@@ -271,14 +267,13 @@ main{
     direction: rtl;
     height: 560px;
     width: 600px;
-
-       
-
+    border: #d4d4d4 solid 3px;
+    border-radius: 2px;
 } 
 
 .div0{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
     height: 160px;
     width: 500px;
@@ -303,11 +298,10 @@ main{
 .splashCard{
     
     width: 99%;
-    height: 155px;
+    height: 160px;
     border-radius: 8px;
     box-shadow: 0px 8px 10px #101010;
-    /* border: blue solid 2px; */
-   
+    /* border: blue solid 2px; */   
 }
 
 .div2{
@@ -324,6 +318,7 @@ main{
 
 .div3{
     display: flex;
+    flex-direction: row-reverse;
     justify-content: left;
     width: 250px;
     height: 30%;
@@ -360,8 +355,7 @@ main{
     border-radius: 1px;
     text-align: left;
     margin: 2px;
-    z-index: 2;
-    
+    z-index: 2;    
 }
 
 
@@ -440,7 +434,7 @@ main{
     
 }
 
-.frames{}
+/* .frames{} */
 .dotFrame{
     width: auto;
     height: 350px;
