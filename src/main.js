@@ -10,7 +10,131 @@ const allData = Object.values(saveData.data); // toda la data como array| const 
 //console.log(allData[0].info);// toda la info de la primera posicion
 //console.log(allData.name);//undefined
 
-/* Funcion mostrar ordenado según dificultad */ 
+// /* Funcion mostrar ordenado según dificultad */ 
+// function showSort(){
+
+//     let resultArr = [];
+//     let arrDiff = allData;
+//     resultArr.push(arrDiff);
+//     //console.log(resultArr);
+    
+
+//     resultArr.sort( (a, b) => {
+//       if (a.difficulty > b.difficulty){
+//         return 1;
+//       }
+//       if (a.difficulty > b.difficulty){
+//         return -1;
+//       }
+//       return 0;
+//     });
+//     console.log(resultArr);
+//   }
+// showSort();
+
+// const showSort = document.getElementById("showDiffSort");
+// showSort.addEventListener("click", diffSort);
+
+// function diffSort() {
+//   const arrDiff = allData[difficulty].info.difficulty;
+
+//   arrDiff.sort( (a,b)=> {
+//     if (a.difficulty==b.difficulty){
+//       return 0;
+//     }
+//     if (a<b){
+//       return -1; 
+//     }
+//   });
+
+//   Array.from(document.querySelectorAll(".div0"))
+//   .sort(element => element.attributes.getNamedItem("difficulty").value.includes(role))
+//   .forEach( arrDiff 
+//     )
+
+//   for(let i=0; i<allData.length; i++){
+
+// const arrDiff = allData[i].info.difficulty;
+//   //console.log(arrDiff);
+//   }
+
+// }
+// diffSort()
+
+
+
+// function showDiff(diff) {
+  
+//   document.getElementById("cards").style.display = "block"; // muestra todas las tarjetas
+  
+//   Array.from(document.querySelectorAll(".div0")) // Muestra los elementos de la clase div0 con el tag que coincide con uno de los roles.
+//   .filter(element => element.attributes.getNamedItem("difficulty").value.includes(diff)) // getNamedItem(); método que devuelve un atributo del nodo desde el objeto
+//   .forEach(element => element.style.display = "flex")
+//   .sort(eleme)
+//   Array.from(document.querySelectorAll(".div0")) // Esconde los elementos del div que no coinciden con los roles indicados.
+//   .filter(element => !element.attributes.getNamedItem("difficulty").value.includes(diff))
+//   .forEach(element => element.style.display = "none")
+// }
+// console.log(showDiff(diff));
+
+// /*ausilio*/
+// var numArray = [140000, 104, 99];
+// numArray.sort(function(a, b) {
+//   return a - b;
+// });
+
+// console.log(numArray);
+
+// let resultArr = [];
+//   let arrDiff = allData;
+//   resultArr.push(arrDiff);
+//   //console.log(resultArr)
+
+//   resultArr.sort();
+//   const resultArr1 = document.getElementById("showDiffSort");
+//   resultArr1.addEventListener("click", resultArr )
+
+
+/*Mostrando solo las tarjetas segun dificultad en el boton "mostrar por dificultad*/
+
+// function mostrarCardDiv (){
+//   const showSort = document.getElementById("showDiffSort");
+//   showSort.addEventListener("click", diffSort)
+// }
+
+// const element1 = document.getElementById("showDiffSort"); //funcion del boton mostrar todos
+// element1.addEventListener("click", showDiff);
+
+
+
+// const dificultad = () => {
+
+//   for(let i=0; i<allData.length; i++){
+// // let resultArr = [];
+//   let arrDiff = allData[i].info.difficulty
+//   // resultArr.push(arrDiff);
+//   }
+// }
+
+// let abc = resultArr
+// function showDiff() {
+
+//   abc.sort( (a,b) => {
+//   if (a.difficulty > b.difficulty) {
+//     return 1;
+//   }
+//   if (a.difficulty < b.difficulty) {
+//     return -1;
+//   }
+//   return 0;
+// }
+
+// )
+// console.log(abc)
+// }
+
+///////////////////////////////////////////////////////////////////////////////////////
+
 
 /* Mostrar todas las tarjetas en el botón "mostrar todos" */
 
@@ -21,22 +145,26 @@ function showAll() {
 document.getElementById("cards").style.display = "block";
 }
 
+
+
 /**
  * Muestra las tarjetas correspondientes al rol
  * 
  *role para filtrar las tarjetas
  */
+
 function showByRole(role) {
   
   document.getElementById("cards").style.display = "block"; // muestra todas las tarjetas
   Array.from(document.querySelectorAll(".div0")) // Muestra los elementos de la clase div0 con el tag que coincide con uno de los roles.
   .filter(element => element.attributes.getNamedItem("tags").value.includes(role)) // getNamedItem(); método que devuelve un atributo del nodo desde el objeto
   .forEach(element => element.style.display = "flex")
-
+  
   Array.from(document.querySelectorAll(".div0")) // Esconde los elementos del div que no coinciden con los roles indicados.
   .filter(element => !element.attributes.getNamedItem("tags").value.includes(role))
   .forEach(element => element.style.display = "none")
 }
+
 
 /*
 -Acceder a la data como array para poder iterar sobre ella
@@ -140,8 +268,8 @@ const showCards = () => {
 }
 showCards();       
 
-/* filtrar por rol*/
 
+/* filtrar por rol según el input value que aprete el usuario*/
 
 let selectRoles= document.querySelectorAll("input[name='cRol']").forEach((input) => {
   input.addEventListener('change',() => {
@@ -150,13 +278,14 @@ let selectRoles= document.querySelectorAll("input[name='cRol']").forEach((input)
       const champs = filterByRole(input.value, allData)
       //console.log(champs);
       showByRole(input.value);
+      
     }
     
   })
 });
 
 
-//console.log(roles);// devuelve los assassin
+// console.log(roles);// devuelve los assassin
 
 // function selectRol(){
 //   const rolChoice = document.getElementsByClassName("rButton");
@@ -170,18 +299,6 @@ let selectRoles= document.querySelectorAll("input[name='cRol']").forEach((input)
 //   }
 // }
 
-
-/* */
-// function btnShowAll(){
-//   const showAll = document.getElementById("btnSA");
-//   let dataShowAll=[];
-  
-//   for(let i=0; i< showAll.length; i++){
-//     if (showAll[i] ==true){
-//       dataShowAll.push(showAll[i]);
-//     }
-//   }
-// }
 
 /*Mostrar y esconder info de campeón segun radio buton que el usuario seleccione*/
 
