@@ -132,10 +132,10 @@ main{
 
 .video{  
     /* border:#101010 solid 1px; */
-    width: 1000px;
+    width: 900px;
     height: 700px;  
     /* margin-top: -90px; medidas en negativo */
-    margin-top: -52px;    
+    margin-top: -55px;    
 }
 
 .container-firstScreen button{
@@ -143,7 +143,7 @@ main{
     justify-content: center;
     align-items: center;
     z-index: 2;
-    margin-top: 65px; 
+    margin-top: 42px; 
     margin-bottom: 100px;    
 
     border: #DEC678 inset 1px;
@@ -185,7 +185,8 @@ main{
     border: #B8B892 inset 1px ;
     background-image: url(img/backgroundPattern.png);
     background-color: whitesmoke;
-    padding: 50px;
+    padding: 10px 50px;
+
 }
 
 
@@ -196,9 +197,10 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-items: center;
     width: 60%;
     height: 662px;
-    border: blue 3px solid;
+    /* border: blue 3px solid; */
 }
 
 .btnShow{
@@ -213,7 +215,8 @@ main{
     
     width: auto;
     height: auto;
-    margin-right: 50px;
+    margin-right: 30px;
+    margin-left: 30px;
     padding: 0px 25px;
 
     text-align: center;
@@ -233,10 +236,8 @@ main{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    
     width: 100%;
-    
-    border: red solid 3px;
+    /* border: red solid 3px; */
 }
 
 .sub-cont-rol{
@@ -257,16 +258,17 @@ main{
     display:flex;
     flex-direction: column;
     justify-content: center;
-    height: 400px;
-    width: 600px;
+    height: 620px;
+    width: 520px;
 }
 
  #cards{
     display: none;
+    justify-content: center;
     overflow: auto;
     direction: rtl;
-    height: 560px;
-    width: 600px;
+    height: 400px;
+    width: 550px;
     border: #d4d4d4 solid 3px;
     border-radius: 2px;
 } 
@@ -282,6 +284,7 @@ main{
     padding: 5px;
     box-shadow: 0px 8px 10px #101010;
     margin: 12px;
+   
 }
 
 .div1{
@@ -291,7 +294,7 @@ main{
     width: 50% ;
 
     height: 100% ;
-
+    
     /* border: red solid 2px; */
 }
 
@@ -336,6 +339,7 @@ main{
     text-align: center;
     align-items: center;
     z-index: 1;
+    box-shadow:  inset 0px 30px 25px #363636;
 }
 
 .div4{
@@ -427,19 +431,19 @@ main{
 .framesRol-div{
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    justify-content: baseline;
     width: 40%;
-    height: 662px;
-    border: blue 3px solid;
-    
+    height: 100%;
+    /* border: blue 3px solid;     */
 }
 
-/* .frames{} */
 .dotFrame{
     width: auto;
     height: 350px;
     position: absolute;
     opacity: 15%;
+    margin-left: 60px;
+    margin-top: 65px;
     
 }
 
@@ -447,6 +451,9 @@ main{
     width: auto;
     height: 372px;
     position: absolute;
+    margin-left: 60px;
+    margin-top: 65px;
+
     
 }
 
@@ -454,7 +461,7 @@ main{
 .roleDiv{
     display: flex;
     position: absolute;
-    align-items: right;
+    align-items: left;
 }
 
 .akali {
@@ -467,68 +474,95 @@ main{
 }
 .jinx {
     width: auto;
-    height: 470px;  
+    height: 470px;
 }
 .lux {
     width: auto;
     height: 470px;
 }
+
+.thresh {
+    width: auto;
+    height: 470px; 
+    
+}
+
 .leona {
     width: auto;
     height: 470px;
 
 }
-.thresh {
-    width: auto;
-    height: 470px; 
-}
 
 #div-assassin{
     display:none;
-    position: absolute;z-index:2;   
+    position: absolute;
+    z-index:2;   
+    /* border: red solid 2px; */
+    margin-left: 30px;
 }
 #div-fighter{
     display:none;
-    position: absolute;z-index:2;
+    position: absolute;
+    z-index:2;
+    /* border: red solid 2px; */
+    margin-left: 30px;
 }
 #div-mage{
     display:none;
-    position: absolute;z-index:2;
+    position: absolute;
+    z-index:2;
+    /* border: red solid 2px; */
+    margin-left: 25px;
 }
 #div-marksman{
     display:none;
-    position: absolute;z-index:2;
+    position: absolute;
+    z-index:2;
+    /* border: red solid 2px; */
+    margin-left: 30px;
 }
 #div-support{
     display:none;
-    position: absolute;z-index:2;
+    position: absolute;
+    z-index:2;
+    /* border: red solid 2px; */
+    margin-left: 25px;
 }
 #div-tank{
     display:none;
-    position: absolute;z-index:2;
+    position: absolute;
+    z-index:2;
+    /* border: red solid 2px; */
+    margin-left: 28px;
 }
 
 
 /*     --     INFO CHAMPS    -    */
 
+.cntnTitleText{
+    width: fit-content;
+    height: fit-content;
+}
+
 .tittleRol{
-    border: green solid 1px;
+    /* border: green solid 1px; */
     text-align: center;    
     text-decoration: double;
     width: auto;
     height: 10%;
+    margin-top: -25px;
+
 }
 
 .textRol{
     
-    width: auto;
-    height: 40%;
+    width: 420px;
+    height: 100px;
     text-align: center;
-    margin: 5% 10% 10% 10%;
+    font-size: small;
+    /* margin: 5% 10% 10% 10%; */
     
 }
-
-
 
 /*     --     FOOTER     --     */
 
@@ -538,7 +572,7 @@ footer{
     justify-content: space-between;
     align-items: center;
     
-    width: 100%;
+    width: auto;
     height: 60px;
     background-color: #252525;
     margin-top: 2px; 
