@@ -9,7 +9,9 @@ const allData = Object.values(saveData.data); // toda la data como array| const 
 //console.log(allData[i]) // imprime el primer objeto, de posicion 0 dentro del array allData
 //console.log(allData[0].info);// toda la info de la primera posicion
 //console.log(allData.name);//undefined
-// /* Funcion mostrar ordenado según dificultad */ 
+
+
+ /* Funcion mostrar ordenado según dificultad */ 
 
 // function showSort(){
 
@@ -32,69 +34,6 @@ const allData = Object.values(saveData.data); // toda la data como array| const 
 //   }
 // showSort();
 
-// const showSort = document.getElementById("showDiffSort");
-// showSort.addEventListener("click", diffSort);
-
-// function diffSort() {
-//   const arrDiff = allData[difficulty].info.difficulty;
-
-//   arrDiff.sort( (a,b)=> {
-//     if (a.difficulty==b.difficulty){
-//       return 0;
-//     }
-//     if (a<b){
-//       return -1; 
-//     }
-//   });
-
-//   Array.from(document.querySelectorAll(".div0"))
-//   .sort(element => element.attributes.getNamedItem("difficulty").value.includes(role))
-//   .forEach( arrDiff 
-//     )
-
-//   for(let i=0; i<allData.length; i++){
-
-// const arrDiff = allData[i].info.difficulty;
-//   //console.log(arrDiff);
-//   }
-
-// }
-// diffSort()
-
-
-
-// function showDiff(diff) {
-  
-//   document.getElementById("cards").style.display = "block"; // muestra todas las tarjetas
-  
-//   Array.from(document.querySelectorAll(".div0")) // Muestra los elementos de la clase div0 con el tag que coincide con uno de los roles.
-//   .filter(element => element.attributes.getNamedItem("difficulty").value.includes(diff)) // getNamedItem(); método que devuelve un atributo del nodo desde el objeto
-//   .forEach(element => element.style.display = "flex")
-//   .sort(eleme)
-//   Array.from(document.querySelectorAll(".div0")) // Esconde los elementos del div que no coinciden con los roles indicados.
-//   .filter(element => !element.attributes.getNamedItem("difficulty").value.includes(diff))
-//   .forEach(element => element.style.display = "none")
-// }
-// console.log(showDiff(diff));
-
-// /*ausilio*/
-// var numArray = [140000, 104, 99];
-// numArray.sort(function(a, b) {
-//   return a - b;
-// });
-
-// console.log(numArray);
-
-// let resultArr = [];
-//   let arrDiff = allData;
-//   resultArr.push(arrDiff);
-//   //console.log(resultArr)
-
-//   resultArr.sort();
-//   const resultArr1 = document.getElementById("showDiffSort");
-//   resultArr1.addEventListener("click", resultArr )
-
-
 /*Mostrando solo las tarjetas segun dificultad en el boton "mostrar por dificultad*/
 
 // function mostrarCardDiv (){
@@ -105,55 +44,35 @@ const allData = Object.values(saveData.data); // toda la data como array| const 
 // const element1 = document.getElementById("showDiffSort"); //funcion del boton mostrar todos
 // element1.addEventListener("click", showDiff);
 
- 
- function dificultad() {
-  console.log(allData)
+
+function filterByDifficulty() {
+  //console.log(allData)
   let resultArr = [];
-  let obj = { name: "", diffId: 0 };
+  
   //for (let i = 0; i < allData.length; i++){
   allData.forEach(function (item) {
+      let obj = { name: "", diffId: 0 };
       obj.name = item.name
       obj.diffId = item.info.difficulty
       resultArr.push(obj)
   })
-   console.log(resultArr)
- }
+  console.log(resultArr)
+}
 
- dificultad();
-
- 
-
-// let abc = resultArr
-// function showDiff() {
-
-
-//   abc.sort( (a,b) => {
-//   if (a.difficulty > b.difficulty) {
-//     return 1;
-//   }
-//   if (a.difficulty < b.difficulty) {
-//     return -1;
-//   }
-//   return 0;
-// }
-
-// )
-// console.log(abc)
-// }
+filterByDifficulty();
 
 ///////////////////////////////////////////////////////////////////////////////////////
 
-
 /* Mostrar todas las tarjetas en el botón "mostrar todos" */
 
-const element = document.getElementById("showBtn"); //funcion del boton mostrar todos
+const element = document.getElementById("showBtn");
 element.addEventListener("click", showAll);
 
 function showAll() {
     showCards(allData);
 }
 
-/*Show by ascending Dificulty */
+/* Show by ascending Dificulty */
 
 const btnDifficulty = document.getElementById("ascending");
 btnDifficulty.addEventListener("click", sortDifficulty(btnDifficulty.value))
@@ -162,9 +81,6 @@ function sortDifficulty(difficulty) {
     let filteredData = sortByDifficulty(difficulty, allData);
     showCards(filteredData);
 }
-
-
-
 /**
  * Muestra las tarjetas correspondientes al rol
  * 
@@ -182,37 +98,6 @@ function sortDifficulty(difficulty) {
 //   let inactive_html_cards = html_cards.filter(element => !element.attributes.getNamedItem("tags").value.includes(role))
 //   inactive_html_cards.forEach(element => element.style.display = "none")
 // }
-
-
-/*
--Acceder a la data como array para poder iterar sobre ella
--Almacenar solo cierta parte de esa data en variables (nombres en una constante, hay que hacer lo mismo con names, tags, img, splash, info, difficulty)
--Armar tarjeta con create element
-*/
-
-/*Variables que contienen cierta data para mostrar en tarjeta(MOSTRAR TODOS, MOSTRAR CADA TARJETA)*/
-
-//const champ = filtrarPorRol(input.value, DATA)
-
-// const allNames = allData.map(element => element.name); //
-// const everyName = Array.from(new Set(allNames));
-// //console.log(everyName); //muestra todos los nombres de los champs
-
-// const allImg = allData.map(element => element.img);
-// const everyImg = Array.from(new Set(allImg));
-// //console.log(everyImg)
-
-// const allSplash = allData.map(element => element.splash);
-// const everySplash = Array.from(new Set(allSplash));
-// //console.log(everySplash)
-
-// const allInfo = allData.map(element => element.info); //
-// const everyInfo = Array.from(new Set(allInfo));
-// //console.log(everyName);
-
-// const allDifficulty = allData.map(element => element.difficulty); //
-// const everyDifficulty = Array.from(new Set(allDifficulty));
-// //console.log(everyName);
 
 /*Introducir la data que tenemos en una tarjeta*/
 
@@ -288,7 +173,6 @@ function showCards(champions) {
 }
 showCards(allData);       
 
-
 /* filtrar por rol según el input value que aprete el usuario*/
 
 let selectRoles= document.querySelectorAll("input[name='cRol']").forEach((input) => {
@@ -303,22 +187,6 @@ let selectRoles= document.querySelectorAll("input[name='cRol']").forEach((input)
     
   })
 });
-
-
-// console.log(roles);// devuelve los assassin
-
-// function selectRol(){
-//   const rolChoice = document.getElementsByClassName("rButton");
-//   let dataRolChoice = [];
-
-//   for(let i=0; i< rolChoice.length; i++){
-//     if (rolChoice[i] == true){
-//       dataRolChoice.push(rolChoice[i]);
-//       console.log(dataRolChoice)
-//     }
-//   }
-// }
-
 
 /*Mostrar y esconder info de campeón segun radio buton que el usuario seleccione*/
 
