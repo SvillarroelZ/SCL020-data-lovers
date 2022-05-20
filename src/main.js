@@ -6,7 +6,6 @@ const saveData = data; // toda la data
 //console.log(saveData) // toda la data, incluye: data, format, type, version
 const allData = Object.values(saveData.data); // toda la data como array| const allCards = Array.from(new Set(allData)); console.log(allCards);
 
-
  /* Funcion mostrar ordenado según dificultad */ 
 
 function showSort(){
@@ -140,7 +139,6 @@ selectSort.addEventListener ('change', () => {
 //   }
 //   document.getElementById("diffCards").style.display = "block";
 // }
-
 
 // const btnDifficulty = document.getElementById("ascending");
 // btnDifficulty.addEventListener("click", sortDifficulty(btnDifficulty.value))
