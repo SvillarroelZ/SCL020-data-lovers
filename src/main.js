@@ -9,26 +9,15 @@ const allData = Object.values(saveData.data); // toda la data como array| const 
 
  /* Funcion mostrar ordenado según dificultad */ 
 
-// function showSort(){
+function showSort(){
 
-//     let resultArr = [];
-//     let arrDiff = allData;
-//     resultArr.push(arrDiff);
-//     //console.log(resultArr);
+    let resultArr = [];
+    let arrDiff = allData;
+    resultArr.push(arrDiff);
+    console.log(resultArr);
     
-
-//     resultArr.sort( (a, b) => {
-//       if (a.difficulty > b.difficulty){
-//         return 1;
-//       }
-//       if (a.difficulty > b.difficulty){
-//         return -1;
-//       }
-//       return 0;
-//     });
-//     console.log(resultArr);
-//   }
-// showSort();
+}
+showSort();
 
 /*Mostrando solo las tarjetas segun dificultad en el boton "mostrar por dificultad*/
 
@@ -103,7 +92,7 @@ function showAll() {
 const selectSort = document.getElementById('sort-select');
 selectSort.addEventListener ('change', () => {
     let sortSelected = selectSort.value;
-    let soResults = soSelecFunc(newData, sortSelected);
+    let soResults = soSelecFunc(allData, sortSelected);
     showCards1(soResults)
 });
 
@@ -112,53 +101,45 @@ selectSort.addEventListener ('change', () => {
 //   document.getElementById("diffCards").innerHTML = ""
 //   console.log(soResults)
 //   for(let i=0; i < soResults.length; i++){
-  
+
 //     let diff0 = document.getElementById("diffCards");
 //     let diffCards0 = document.createElement("div");
 //     diff0.appendChild(diffCards0);
 //     diffCards0.setAttribute("class", "diff0"); //div0 es el contenedor de la tarjeta
 //     diffCards0.setAttribute("tags", soResults[i].tags); //Unimos los roles a la tarjeta
-
 //     let diff1 = document.createElement("div");//creamos el div para el img splash
 //     diffCards0.appendChild(diff1);
 //     diff1.setAttribute("class", "diff1");
-
-//     // let splash = document.createElement("img");
-//     // div1.appendChild(splash);
-//     // splash.src = newData[i].splash;
-//     // splash.setAttribute("class", "splashCard");  
-    
+//     let splash = document.createElement("img");
+//     div1.appendChild(splash);
+//     splash.src = soResults[i].splash;
+//     splash.setAttribute("class", "splashCard");  
+ 
 //     let diff2 = document.createElement("div");//contenedor de img icono titulo e info
 //     diffCards0.appendChild(diff2);
 //     diff2.setAttribute("class", "diff2");
-
 //     let diff3 = document.createElement("div");//contenedor de img icono y titulo
 //     diff2.appendChild(diff3);
 //     diff3.setAttribute("class", "diff3");
-
 //     let image1 = document.createElement("img");
 //     diff3.appendChild(image1);
 //     image1.src = soResults.img;
 //     image1.setAttribute("class", "iconImage");   
-
 //     let names1 = document.createElement("h3");
 //     diff3.appendChild(names1);
 //     names1.innerHTML =soResults.name;
 //     names1.setAttribute("class", "nameCard");  
-
 //     let diff4 = document.createElement("div");// Contenedor de info
 //     diff2.appendChild(diff4);
 //     diff4.setAttribute("class", "diff4");
-
 //     let diff = document.createElement("p");
 //     diff4.appendChild(diff);
 //     diff.innerHTML = `Dificultad: ${soResults.diffId}`;
 //     diff.setAttribute("class", "diffCard")  
-    
+ 
 //   }
 //   document.getElementById("diffCards").style.display = "block";
 // }
-// showCards1();       
 
 
 // const btnDifficulty = document.getElementById("ascending");
