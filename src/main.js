@@ -1,177 +1,57 @@
 import { getData, filterByRole, soSelecFunc} from './data.js';
 import data from "./data/lol/lol.js";
-//console.log(data.data) // muestra todos los objetos por nombre de cada campeon
-//getData(data);//que hace esto?
 const saveData = data; // toda la data
 //console.log(saveData) // toda la data, incluye: data, format, type, version
 const allData = Object.values(saveData.data); // toda la data como array| const allCards = Array.from(new Set(allData)); console.log(allCards);
 
- /* Funcion mostrar ordenado según dificultad */ 
+//////////funcion que queriamos guardar/////////////
 
-function showSort(){
-
-    let resultArr = [];
-    let arrDiff = allData;
-    resultArr.push(arrDiff);
-    console.log(resultArr);
-    
-}
-showSort();
-
-/*Mostrando solo las tarjetas segun dificultad en el boton "mostrar por dificultad*/
-
-// function mostrarCardDiv (){
-//   const showSort = document.getElementById("showDiffSort");
-//   showSort.addEventListener("click", diffSort)
-// }
-
-// const element1 = document.getElementById("showDiffSort"); //funcion del boton mostrar todos
-// element1.addEventListener("click", showDiff);
-
-// function mappedInfo () {
-//   let mapInfo = allData.map(a_info => a_info.info);
-//   return mapInfo;
-// };
-
-// function AUSILIO () {
-
-//   let mapInfo = allData.map(a_info => a_info.info);
-//   let arrInfoMapeada = []
-//   for(let i=0; i < mapInfo.length; i++){
-
-//   let infoMapeada = mapInfo[i].difficulty;
-//   arrInfoMapeada.push(infoMapeada)
-  
-//   }
-//  return
-// }
-// AUSILIO() 
-
-// function sortearInfo (arrInfoMapeada){
-//   for(let i=0; i < i.diffId; i++){
-//     let sor= i.sort(a, b) {
-//     return a - b;
+// function filterByDifficulty() {
+//   //console.log(allData)
+//   let resultArr = [];
+//    //for (let i = 0; i < allData.length; i++){
+//     allData.forEach(function (item) {
+//       let obj = { name: "", diffId: 0 };
+//       obj.name = item.name
+//       obj.diffId = item.info.difficulty
+//       resultArr.push(obj)
 //   })
+//   console.log(resultArr)
 // }
-// }
-// sortearInfo()
+// filterByDifficulty();
+// let newData = filterbyDifficulty()
 
-//////////////***********////////////********** */ */
-
-
-
-//   let diffSorted = resultArr.sort( (a, b) => {
-//           if (a.diffId > b.diffId){
-//             return 1;
-//           }
-//           if (a.diffId > b.diffId){
-//             return -1;
-//           }
-//           return 0;
-//         });
-//         console.log(diffSorted)
-
-
-
-
-////////////******///////////*********///////////*****/////////////***********/////////////
+//////////////////
 
 /* Mostrar todas las tarjetas en el botón "mostrar todos" */
 
 const element = document.getElementById("showBtn");
 element.addEventListener("click", showAll);
-
 function showAll() {
     showCards(allData);
 }
 
-
+/* Mostrar tarjetas "nuevas" en el select según ascendente y descendente */
 /* Show by ascending Dificulty */
 
 const selectSort = document.getElementById('sort-select');
 selectSort.addEventListener ('change', () => {
     let sortSelected = selectSort.value;
     let soResults = soSelecFunc(allData, sortSelected);
-    showCards1(soResults)
+    //showCards(sortSelected);
 });
 
-// function showCards1(soResults) {
-//   document.getElementById("diffCards").style.display = "none";
-//   document.getElementById("diffCards").innerHTML = ""
-//   console.log(soResults)
-//   for(let i=0; i < soResults.length; i++){
 
-//     let diff0 = document.getElementById("diffCards");
-//     let diffCards0 = document.createElement("div");
-//     diff0.appendChild(diffCards0);
-//     diffCards0.setAttribute("class", "diff0"); //div0 es el contenedor de la tarjeta
-//     diffCards0.setAttribute("tags", soResults[i].tags); //Unimos los roles a la tarjeta
-//     let diff1 = document.createElement("div");//creamos el div para el img splash
-//     diffCards0.appendChild(diff1);
-//     diff1.setAttribute("class", "diff1");
-//     let splash = document.createElement("img");
-//     div1.appendChild(splash);
-//     splash.src = soResults[i].splash;
-//     splash.setAttribute("class", "splashCard");  
- 
-//     let diff2 = document.createElement("div");//contenedor de img icono titulo e info
-//     diffCards0.appendChild(diff2);
-//     diff2.setAttribute("class", "diff2");
-//     let diff3 = document.createElement("div");//contenedor de img icono y titulo
-//     diff2.appendChild(diff3);
-//     diff3.setAttribute("class", "diff3");
-//     let image1 = document.createElement("img");
-//     diff3.appendChild(image1);
-//     image1.src = soResults.img;
-//     image1.setAttribute("class", "iconImage");   
-//     let names1 = document.createElement("h3");
-//     diff3.appendChild(names1);
-//     names1.innerHTML =soResults.name;
-//     names1.setAttribute("class", "nameCard");  
-//     let diff4 = document.createElement("div");// Contenedor de info
-//     diff2.appendChild(diff4);
-//     diff4.setAttribute("class", "diff4");
-//     let diff = document.createElement("p");
-//     diff4.appendChild(diff);
-//     diff.innerHTML = `Dificultad: ${soResults.diffId}`;
-//     diff.setAttribute("class", "diffCard")  
- 
-//   }
-//   document.getElementById("diffCards").style.display = "block";
-// }
+function showCards1(sortSelected){
+  document.getElementById("").style.display= "none;"
 
-// const btnDifficulty = document.getElementById("ascending");
-// btnDifficulty.addEventListener("click", sortDifficulty(btnDifficulty.value))
+}
 
-// function sortDifficulty(difficulty) {
-//     let filteredData = sortByDifficulty(difficulty, allData);
-//     showCards(filteredData);
-// }
+//Aqui deberiamos hacer las tarjetas nuevas pa la dificultad// 
 
-/**
- * Muestra las tarjetas correspondientes al rol
- * 
- *role para filtrar las tarjetas
- */
 
-// function showByRole(role) {
-  
-//   document.getElementById("cards").style.display = "block"; // muestra todas las tarjetas
-//   let html_cards = Array.from(document.querySelectorAll(".div0")) // Muestra los elementos de la clase div0 con el tag que coincide con uno de los roles.
 
-//   let active_html_cards = html_cards.filter(element => element.attributes.getNamedItem("tags").value.includes(role)) // getNamedItem(); método que devuelve un atributo del nodo desde el objeto
-//   active_html_cards.forEach(element => element.style.display = "flex")
-
-//   let inactive_html_cards = html_cards.filter(element => !element.attributes.getNamedItem("tags").value.includes(role))
-//   inactive_html_cards.forEach(element => element.style.display = "none")
-// }
-
-/*Introducir la data que tenemos en una tarjeta*/
-
-//const tarjetas = document.getElementById("cards"); //id del div donde vamos a meter el p creado
-// const divCards = document.createElement("p"); // el parrafo que estamos creando para meter la info
-//tarjetas.appendChild(divCards); // creando un "p" al id "cards".
-// divCards.innerHTML= everyName; // muestra los nombres en el p creado
+// Aqui tenemos las tarjetas del mostrar todo y el que se muestra por rol //
 
 function showCards(champions) {
     document.getElementById("cards").style.display = "none";
@@ -247,7 +127,7 @@ let selectRoles= document.querySelectorAll("input[name='cRol']").forEach((input)
     if(input.checked){
       //console.log(input.value);
       let champions = filterByRole(input.value, allData)
-      console.log(champions);
+      //console.log(champions);
       //showByRole(input.value);
       showCards(champions);
     }
@@ -333,3 +213,28 @@ function mostrarTank(){
   document.getElementById("div-support").style.display="none";
   document.getElementById("div-tank").style.display="block";  
 }
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////
+
+// Muestra las tarjetas correspondientes al rol
+
+// function showByRole(role) {
+  
+//   document.getElementById("cards").style.display = "block"; // muestra todas las tarjetas
+//   let html_cards = Array.from(document.querySelectorAll(".div0")) // Muestra los elementos de la clase div0 con el tag que coincide con uno de los roles.
+
+//   let active_html_cards = html_cards.filter(element => element.attributes.getNamedItem("tags").value.includes(role)) // getNamedItem(); método que devuelve un atributo del nodo desde el objeto
+//   active_html_cards.forEach(element => element.style.display = "flex")
+
+//   let inactive_html_cards = html_cards.filter(element => !element.attributes.getNamedItem("tags").value.includes(role))
+//   inactive_html_cards.forEach(element => element.style.display = "none")
+// }
+
+//////////////////////////////////////////////
