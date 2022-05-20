@@ -4,24 +4,6 @@ const saveData = data; // toda la data
 //console.log(saveData) // toda la data, incluye: data, format, type, version
 const allData = Object.values(saveData.data); // toda la data como array| const allCards = Array.from(new Set(allData)); console.log(allCards);
 
-//////////funcion que queriamos guardar/////////////
-
-// function filterByDifficulty() {
-//   //console.log(allData)
-//   let resultArr = [];
-//    //for (let i = 0; i < allData.length; i++){
-//     allData.forEach(function (item) {
-//       let obj = { name: "", diffId: 0 };
-//       obj.name = item.name
-//       obj.diffId = item.info.difficulty
-//       resultArr.push(obj)
-//   })
-//   console.log(resultArr)
-// }
-// filterByDifficulty();
-// let newData = filterbyDifficulty()
-
-//////////////////
 
 /* Mostrar todas las tarjetas en el botón "mostrar todos" */
 
@@ -31,94 +13,88 @@ function showAll() {
     showCards(allData);
 }
 
-/* Mostrar tarjetas "nuevas" en el select según ascendente y descendente */
-/* Show by ascending Dificulty */
+/* Mostrar tarjetas en el select según ascendente y descendente */
 
 const selectSort = document.getElementById('sort-select');
 selectSort.addEventListener ('change', () => {
     let sortSelected = selectSort.value;
     let soResults = soSelecFunc(allData, sortSelected);
-    //showCards(sortSelected);
+    showCards(allData);
 });
 
 
-function showCards1(sortSelected){
-  document.getElementById("").style.display= "none;"
+//////////////////////////////////////////////////////////////////////////////////////
+// Aqui creamos las tarjetas //
 
-}
-
-//Aqui deberiamos hacer las tarjetas nuevas pa la dificultad// 
-
-
-
-// Aqui tenemos las tarjetas del mostrar todo y el que se muestra por rol //
 
 function showCards(champions) {
-    document.getElementById("cards").style.display = "none";
-    document.getElementById("cards").innerHTML = ""
-    for(let i=0; i < champions.length; i++){
+  document.getElementById("cards").style.display = "none";
+  document.getElementById("cards").innerHTML = ""
+  for(let i=0; i < champions.length; i++){
+  
+    let div0 = document.getElementById("cards");
+    let divCards0 = document.createElement("div");
+    div0.appendChild(divCards0);
+    divCards0.setAttribute("class", "div0"); //div0 es el contenedor de la tarjeta
+    divCards0.setAttribute("tags", champions[i].tags); //Unimos los roles a la tarjeta
+
+    let div1 = document.createElement("div");//creamos el div para el img splash
+    divCards0.appendChild(div1);
+    div1.setAttribute("class", "div1");
+
+    let splash = document.createElement("img");
+    div1.appendChild(splash);
+    splash.src = champions[i].splash;
+    splash.setAttribute("class", "splashCard");  
     
-      let div0 = document.getElementById("cards");
-      let divCards0 = document.createElement("div");
-      div0.appendChild(divCards0);
-      divCards0.setAttribute("class", "div0"); //div0 es el contenedor de la tarjeta
-      divCards0.setAttribute("tags", champions[i].tags); //Unimos los roles a la tarjeta
+    let div2 = document.createElement("div");//contenedor de img icono titulo e info
+    divCards0.appendChild(div2);
+    div2.setAttribute("class", "div2");
 
-      let div1 = document.createElement("div");//creamos el div para el img splash
-      divCards0.appendChild(div1);
-      div1.setAttribute("class", "div1");
+    let div3 = document.createElement("div");//contenedor de img icono y titulo
+    div2.appendChild(div3);
+    div3.setAttribute("class", "div3");
 
-      let splash = document.createElement("img");
-      div1.appendChild(splash);
-      splash.src = champions[i].splash;
-      splash.setAttribute("class", "splashCard");  
-      
-      let div2 = document.createElement("div");//contenedor de img icono titulo e info
-      divCards0.appendChild(div2);
-      div2.setAttribute("class", "div2");
+    let image = document.createElement("img");
+    div3.appendChild(image);
+    image.src = champions[i].img;
+    image.setAttribute("class", "iconImage");   
 
-      let div3 = document.createElement("div");//contenedor de img icono y titulo
-      div2.appendChild(div3);
-      div3.setAttribute("class", "div3");
+    let names = document.createElement("h3");
+    div3.appendChild(names);
+    names.innerHTML =champions[i].name;
+    names.setAttribute("class", "nameCard");  
 
-      let image = document.createElement("img");
-      div3.appendChild(image);
-      image.src = champions[i].img;
-      image.setAttribute("class", "iconImage");   
+    let div4 = document.createElement("div");// Contenedor de info
+    div2.appendChild(div4);
+    div4.setAttribute("class", "div4");
 
-      let names = document.createElement("h3");
-      div3.appendChild(names);
-      names.innerHTML =champions[i].name;
-      names.setAttribute("class", "nameCard");  
+    let attack = document.createElement("p");
+    div4.appendChild(attack);
+    attack.innerHTML=`Ataque: ${champions[i].info.attack}`;
+    attack.setAttribute("class", "attackCard");  
 
-      let div4 = document.createElement("div");// Contenedor de info
-      div2.appendChild(div4);
-      div4.setAttribute("class", "div4");
+    let defense = document.createElement("p");
+    div4.appendChild(defense);
+    defense.innerHTML=`Defensa: ${champions[i].info.defense}`;
+    defense.setAttribute("class", "defenseCard");  
 
-      let attack = document.createElement("p");
-      div4.appendChild(attack);
-      attack.innerHTML=`Ataque: ${champions[i].info.attack}`;
-      attack.setAttribute("class", "attackCard");  
+    let magic = document.createElement("p");
+    div4.appendChild(magic);
+    magic.innerHTML=`Magia: ${champions[i].info.magic}`;
+    magic.setAttribute("class", "magicCard");  
 
-      let defense = document.createElement("p");
-      div4.appendChild(defense);
-      defense.innerHTML=`Defensa: ${champions[i].info.defense}`;
-      defense.setAttribute("class", "defenseCard");  
-
-      let magic = document.createElement("p");
-      div4.appendChild(magic);
-      magic.innerHTML=`Magia: ${champions[i].info.magic}`;
-      magic.setAttribute("class", "magicCard");  
-
-      let diff = document.createElement("p");
-      div4.appendChild(diff);
-      diff.innerHTML = `Dificultad: ${champions[i].info.difficulty}`;
-      diff.setAttribute("class", "diffCard")  
-      //console.log("cards")
-    }
-    document.getElementById("cards").style.display = "block";
+    let diff = document.createElement("p");
+    div4.appendChild(diff);
+    diff.innerHTML = `Dificultad: ${champions[i].info.difficulty}`;
+    diff.setAttribute("class", "diffCard")  
+    //console.log("cards")
+  }
+  document.getElementById("cards").style.display = "block";
 }
 showCards(allData);       
+
+//////////////////////////////////////////////////////////////////////////////
 
 /* filtrar por rol según el input value que aprete el usuario*/
 
@@ -213,13 +189,6 @@ function mostrarTank(){
   document.getElementById("div-support").style.display="none";
   document.getElementById("div-tank").style.display="block";  
 }
-
-
-
-
-
-
-
 
 ////////////////////////////////////////////////
 
