@@ -1,14 +1,10 @@
-import { getData, filterByRole, sortByDifficulty} from './data.js';
+import { getData, filterByRole, soSelecFunc} from './data.js';
 import data from "./data/lol/lol.js";
 //console.log(data.data) // muestra todos los objetos por nombre de cada campeon
 //getData(data);//que hace esto?
 const saveData = data; // toda la data
 //console.log(saveData) // toda la data, incluye: data, format, type, version
 const allData = Object.values(saveData.data); // toda la data como array| const allCards = Array.from(new Set(allData)); console.log(allCards);
-//console.log(allData);
-//console.log(allData[i]) // imprime el primer objeto, de posicion 0 dentro del array allData
-//console.log(allData[0].info);// toda la info de la primera posicion
-//console.log(allData.name);//undefined
 
 
  /* Funcion mostrar ordenado según dificultad */ 
@@ -44,24 +40,53 @@ const allData = Object.values(saveData.data); // toda la data como array| const 
 // const element1 = document.getElementById("showDiffSort"); //funcion del boton mostrar todos
 // element1.addEventListener("click", showDiff);
 
+// function mappedInfo () {
+//   let mapInfo = allData.map(a_info => a_info.info);
+//   return mapInfo;
+// };
 
-function filterByDifficulty() {
-  //console.log(allData)
-  let resultArr = [];
+// function AUSILIO () {
+
+//   let mapInfo = allData.map(a_info => a_info.info);
+//   let arrInfoMapeada = []
+//   for(let i=0; i < mapInfo.length; i++){
+
+//   let infoMapeada = mapInfo[i].difficulty;
+//   arrInfoMapeada.push(infoMapeada)
   
-  //for (let i = 0; i < allData.length; i++){
-  allData.forEach(function (item) {
-      let obj = { name: "", diffId: 0 };
-      obj.name = item.name
-      obj.diffId = item.info.difficulty
-      resultArr.push(obj)
-  })
-  console.log(resultArr)
-}
+//   }
+//  return
+// }
+// AUSILIO() 
 
-filterByDifficulty();
+// function sortearInfo (arrInfoMapeada){
+//   for(let i=0; i < i.diffId; i++){
+//     let sor= i.sort(a, b) {
+//     return a - b;
+//   })
+// }
+// }
+// sortearInfo()
 
-///////////////////////////////////////////////////////////////////////////////////////
+//////////////***********////////////********** */ */
+
+
+
+//   let diffSorted = resultArr.sort( (a, b) => {
+//           if (a.diffId > b.diffId){
+//             return 1;
+//           }
+//           if (a.diffId > b.diffId){
+//             return -1;
+//           }
+//           return 0;
+//         });
+//         console.log(diffSorted)
+
+
+
+
+////////////******///////////*********////////////*****//////////////***********//////////////
 
 /* Mostrar todas las tarjetas en el botón "mostrar todos" */
 
@@ -72,15 +97,78 @@ function showAll() {
     showCards(allData);
 }
 
+
 /* Show by ascending Dificulty */
 
-const btnDifficulty = document.getElementById("ascending");
-btnDifficulty.addEventListener("click", sortDifficulty(btnDifficulty.value))
+const selectSort = document.getElementById('sort-select');
+selectSort.addEventListener ('change', () => {
+    let sortSelected = selectSort.value;
+    let soResults = soSelecFunc(newData, sortSelected);
+    showCards1(soResults)
+});
 
-function sortDifficulty(difficulty) {
-    let filteredData = sortByDifficulty(difficulty, allData);
-    showCards(filteredData);
-}
+// function showCards1(soResults) {
+//   document.getElementById("diffCards").style.display = "none";
+//   document.getElementById("diffCards").innerHTML = ""
+//   console.log(soResults)
+//   for(let i=0; i < soResults.length; i++){
+  
+//     let diff0 = document.getElementById("diffCards");
+//     let diffCards0 = document.createElement("div");
+//     diff0.appendChild(diffCards0);
+//     diffCards0.setAttribute("class", "diff0"); //div0 es el contenedor de la tarjeta
+//     diffCards0.setAttribute("tags", soResults[i].tags); //Unimos los roles a la tarjeta
+
+//     let diff1 = document.createElement("div");//creamos el div para el img splash
+//     diffCards0.appendChild(diff1);
+//     diff1.setAttribute("class", "diff1");
+
+//     // let splash = document.createElement("img");
+//     // div1.appendChild(splash);
+//     // splash.src = newData[i].splash;
+//     // splash.setAttribute("class", "splashCard");  
+    
+//     let diff2 = document.createElement("div");//contenedor de img icono titulo e info
+//     diffCards0.appendChild(diff2);
+//     diff2.setAttribute("class", "diff2");
+
+//     let diff3 = document.createElement("div");//contenedor de img icono y titulo
+//     diff2.appendChild(diff3);
+//     diff3.setAttribute("class", "diff3");
+
+//     let image1 = document.createElement("img");
+//     diff3.appendChild(image1);
+//     image1.src = soResults.img;
+//     image1.setAttribute("class", "iconImage");   
+
+//     let names1 = document.createElement("h3");
+//     diff3.appendChild(names1);
+//     names1.innerHTML =soResults.name;
+//     names1.setAttribute("class", "nameCard");  
+
+//     let diff4 = document.createElement("div");// Contenedor de info
+//     diff2.appendChild(diff4);
+//     diff4.setAttribute("class", "diff4");
+
+//     let diff = document.createElement("p");
+//     diff4.appendChild(diff);
+//     diff.innerHTML = `Dificultad: ${soResults.diffId}`;
+//     diff.setAttribute("class", "diffCard")  
+    
+//   }
+//   document.getElementById("diffCards").style.display = "block";
+// }
+// showCards1();       
+
+
+// const btnDifficulty = document.getElementById("ascending");
+// btnDifficulty.addEventListener("click", sortDifficulty(btnDifficulty.value))
+
+// function sortDifficulty(difficulty) {
+//     let filteredData = sortByDifficulty(difficulty, allData);
+//     showCards(filteredData);
+// }
+
 /**
  * Muestra las tarjetas correspondientes al rol
  * 
