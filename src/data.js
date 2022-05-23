@@ -1,15 +1,13 @@
-import data from "./data/lol/lol.js";
-export const getData = (data) => {
-};
-
 export const filterByRole = (rolChoice, allData) =>{
-    return allData.filter(campeon => campeon.tags.includes(rolChoice))
+    const filteredData= allData.filter(campeon => campeon.tags.includes(rolChoice))
+    return filteredData
+    console.log(filteredData); 
 };
 
-export const soSelecFunc = (infoN, sortSelected) => {
+export const soSelecFunc = (allData, sortSelected) => {
 
     if (sortSelected === 'sortA'){
-        const sortedCharA = infoN.sort((a, b) => {
+        allData.sort((a, b) => {
             if (a.info.difficulty < b.info.difficulty) return -1;
             return 1;
         });
@@ -18,31 +16,11 @@ export const soSelecFunc = (infoN, sortSelected) => {
     }
 
     else if (sortSelected === 'sortD') {
-        const sortedCharD = infoN.sort((a, b) => {
+        allData.sort((a, b) => {
             if (a.info.difficulty < b.info.difficulty) return 1;
             return -1;
         });
         //console.log(sortedCharD)
-    }
-}
-
-    /////////////////////////////////////
-
-function normalizeInfo() {
-    let newArr= [];
-    const allData_1 = Object.values(data.data);
-    //console.log(data)
-    allData_1.forEach(element => {
-        newArr.push({
-            attack: element.info.attack,
-            defense: element.info.defense,
-            magic: element.info.magic,
-            difficulty: element.info.difficulty,
-            img: element.img
-        })
-
-    });
-    return newArr;
-}
-let infoN = normalizeInfo()
-//console.log(infoN);
+    }    
+};
+//console.log(soSelecFunc);

@@ -1,14 +1,14 @@
-import { getData, filterByRole, soSelecFunc} from './data.js';
+import { filterByRole, soSelecFunc} from './data.js';
 import data from "./data/lol/lol.js";
 const saveData = data; // toda la data
 //console.log(saveData) // toda la data, incluye: data, format, type, version
 const allData = Object.values(saveData.data); // toda la data como array| const allCards = Array.from(new Set(allData)); console.log(allCards);
-
+//soResults(allData, sortSelected)
 
 /* Mostrar todas las tarjetas en el botón "mostrar todos" */
 
-const element = document.getElementById("showBtn");
-element.addEventListener("click", showAll);
+const btnShow = document.getElementById("showBtn");
+btnShow.addEventListener("click", showAll);
 function showAll() {
     showCards(allData);
 }
@@ -18,11 +18,18 @@ function showAll() {
 const selectSort = document.getElementById('sort-select');
 selectSort.addEventListener ('change', () => {
     let sortSelected = selectSort.value;
-    let soResults = soSelecFunc(allData, sortSelected);
+    soSelecFunc(allData, sortSelected);
     showCards(allData);
 });
 
+// /* Botón refresh */
 
+// const refreshBtn = document.getElementById("refresh");
+// refreshBtn.addEventListener("click", refreshed);
+// function refreshed() {
+//     document.getElementById("").innerHTML = Math.random();
+//    // showCards(allData);
+// }
 //////////////////////////////////////////////////////////////////////////////////////
 // Aqui creamos las tarjetas //
 
@@ -98,7 +105,7 @@ showCards(allData);
 
 /* filtrar por rol según el input value que aprete el usuario*/
 
-let selectRoles= document.querySelectorAll("input[name='cRol']").forEach((input) => {
+document.querySelectorAll("input[name='cRol']").forEach((input) => {
   input.addEventListener('change',() => {
     if(input.checked){
       //console.log(input.value);
@@ -106,8 +113,7 @@ let selectRoles= document.querySelectorAll("input[name='cRol']").forEach((input)
       //console.log(champions);
       //showByRole(input.value);
       showCards(champions);
-    }
-    
+    }    
   })
 });
 
