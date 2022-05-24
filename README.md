@@ -22,8 +22,11 @@ un proyecto que busca responder a esas necesidades.
 
 ## 2. Resumen del proyecto
 la planificacion del proyecto se llevo a cabo en github projects el cual esta disponible en el repositorio.
-desarrollamos una encuesta para saber las necesidades reales de los jugadores
+desarrollamos una encuesta para saber las necesidades reales de los jugadores aqui podemos visualizar algunas de las respuestas y el link de los resultados:
 https://forms.gle/TmYWPyNa4paanj7X8
+
+![alt text](img/README img/difficultysurvey.png)
+
 desarrollamos el prototipo de baja
 Prototipo alta fidelidad https://www.figma.com/file/FFf8gazAEYt8xh1MkXRWry/League-of-legends?node-id=178%3A2
 
