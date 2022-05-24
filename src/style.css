@@ -602,7 +602,7 @@ footer{
 
 @media screen and (max-width: 1200px){
     .container-firstScreen{
-        border: red solid 5px;
+        /* border: red solid 5px; */
         width: auto;
         height: 585px;
         /* src: url(img/backgroundPattern.png); */
@@ -645,7 +645,7 @@ footer{
 @media screen and (max-width: 720px){
 
     .container-firstScreen{
-        border: purple solid 5px;
+        /* border: purple solid 5px; */
         width: auto;
         height: 570px;
         /* src: url(img/backgroundPattern.png); */
@@ -684,7 +684,7 @@ footer{
 
     
     .container-secondScreen{
-        border: purple solid 5px;
+        /* border: purple solid 5px; */
         min-width: auto;
     }
     .framesRol-div{
@@ -722,7 +722,7 @@ footer{
 @media screen and (max-width: 500px){
 
     .container-firstScreen{
-        border: blue solid 5px;
+        /* border: blue solid 5px; */
         width: auto;
         height: 570px;
         /* src: url(img/backgroundPattern.png); */
@@ -765,7 +765,7 @@ footer{
 
     
     .container-secondScreen{
-        border: blue solid 5px;
+        /* border: blue solid 5px; */
 
         min-width: auto;
     }
@@ -879,4 +879,81 @@ footer{
         width: 30px;
         margin-left: 25px;   
     }
+}
+
+@media screen and (max-width: 414px){
+
+    body{
+        /* background-image: url(img/backgroundPattern.png); */
+        background-attachment: fixed;
+        border: greenyellow inset 1px;
+        width: 413px;
+        height: 896px;
+    }
+
+    header{
+        border: orangered solid 1px;
+        
+    }
+    .riot{
+        width: 70px;
+        margin-left: 10px;
+    }
+    .tittle{
+        font-size: medium;
+    }
+    .play{
+        width: 70px;
+        height: 25px;
+        margin: 5px;
+        font-size: small;
+        
+    }
+
+    .container-firstScreen{
+        border: cyan solid 1px;
+        width: auto;
+        height: 480px;
+
+    }
+
+    .logoLeague{
+        width: 250px;
+    }
+    .video{
+        width: 350px;
+    }
+    
+    
+    
+    /*.container-secondScreen{
+        width: 414px;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-roles{
+        /* display: flex;
+        flex-wrap: wrap; */
+        /* flex-direction: row;
+        width: 100px;
+    }
+    .sub-cont-rol{
+        display: flex;
+        flex-wrap: wrap;
+
+        width: 1px;
+    }
+
+    .sub-cont-rol img{
+        width: 10px;
+    }
+
+    .contDiv{
+        width: 300px;
+    }
+
+    #cards{
+        width: 250px;
+    } */ */
 }
