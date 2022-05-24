@@ -13,22 +13,6 @@ html{
 
 
 
-/* ::-webkit-scrollbar{ 
-    background: #111;
-    width: 15px;
-    
-    box-shadow: inset 0 0 10px #645035;
-}
-::-webkit-scrollbar-track{
-    box-shadow: inset 0 0 10px #c9bfa9c0;
-    border-radius: 2px;
-}
-
-::-webkit-scrollbar-thumb{
-    background: #b1aaa1 ;
-    border-radius: 10px;
-    border: #fff1db solid 1px ;
-} */
 ::-webkit-scrollbar{ 
     background: #C4C4C4;
     width: 15px;
@@ -237,6 +221,7 @@ main{
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    padding: 20px;
     /* border: red solid 3px; */
 }
 
@@ -271,6 +256,7 @@ main{
     width: 550px;
     border: #d4d4d4 solid 3px;
     border-radius: 2px;
+    
 } 
 
 .div0{
@@ -434,6 +420,7 @@ main{
     justify-content: baseline;
     width: 40%;
     height: 100%;
+    padding: 20px;
     /* border: blue 3px solid;     */
 }
 
@@ -611,4 +598,285 @@ footer{
     width: 55px;
     height: 55px;
     margin-top: 8px;
+}
+
+@media screen and (max-width: 1200px){
+    .container-firstScreen{
+        border: red solid 5px;
+        width: auto;
+        height: 585px;
+        /* src: url(img/backgroundPattern.png); */
+    
+    }
+    .framesRol-div{
+        display: none;
+    }
+    .container-roles{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .video{
+        display: flex;
+        width: auto;
+        height: 400px;  
+        margin: 100px;
+        
+    }
+    .logoLeague{
+        display: flex;
+        width: 600px;
+        justify-content: center;
+        align-items: center;
+        padding: 60px;
+    }
+
+    .container-firstScreen button{
+        justify-content: center;
+        margin-top: 0px;
+    }
+
+    .btnShow{
+        margin-top: 100px;
+        min-width: 450px;
+    }
+}
+
+@media screen and (max-width: 720px){
+
+    .container-firstScreen{
+        border: purple solid 5px;
+        width: auto;
+        height: 570px;
+        /* src: url(img/backgroundPattern.png); */
+    
+    }
+
+    .tittle{
+        font-size:medium
+    }
+    .video{
+        display: flex;
+        width: auto;
+        height: 300px;  
+        margin: 100px;
+        
+    }
+
+    .logoLeague{
+        display: flex;
+        width: 400px;
+        justify-content: center;
+        align-items: center;
+        padding: 160px;
+    }
+
+    .container-firstScreen button{
+        justify-content: center;
+        margin-top: -120px;
+    }
+
+    a.url-boton{
+        display: flex;
+        justify-content: center;
+        
+    } 
+
+    
+    .container-secondScreen{
+        border: purple solid 5px;
+        min-width: auto;
+    }
+    .framesRol-div{
+        display: none;
+    }
+
+    .btnShow{
+        margin-top: 100px;
+        min-width: 450px;
+    }
+    .container-roles{
+        display: flex;
+        justify-content: center;
+    }
+
+    .sub-cont-rol{
+        width: 10px;
+        padding: 40px;
+    }
+
+    .sub-cont-rol img{
+        height: 70px;
+        width: auto;
+    }
+    #cards{
+        justify-content: center;
+        align-items: center;
+        width: 550px;
+        height: 250px;
+        margin-left: -10px;
+    } 
+}
+
+
+@media screen and (max-width: 500px){
+
+    .container-firstScreen{
+        border: blue solid 5px;
+        width: auto;
+        height: 570px;
+        /* src: url(img/backgroundPattern.png); */
+    
+    }
+
+    .tittle{
+        font-size: medium;    
+    }
+    .video{
+        display: flex;
+        width: auto;
+        height: 250px;  
+        margin: 150px;
+        
+    }
+
+    .logoLeague{
+        display: flex;
+        width: 300px;
+        justify-content: center;
+        align-items: center;
+        padding: 160px;
+    }
+
+    .container-firstScreen button{
+        justify-content: center;
+        margin-top: -120px;
+        width: auto;
+    }
+
+    a.url-boton{
+        display: flex;
+        justify-content: center;
+        width: 90px;
+        height: 25px;
+        font-size: small;
+        
+    } 
+
+    
+    .container-secondScreen{
+        border: blue solid 5px;
+
+        min-width: auto;
+    }
+    .framesRol-div{
+        display: none;
+    }
+    .container-roles{
+        display: flex;
+        justify-content: center;
+    }
+
+    .sub-cont-rol{
+        padding: 30px;
+    }
+
+    .sub-cont-rol img{
+        height: 50px;
+        width: auto;
+    }
+    .rButton{
+        width: auto;
+        height: 10px;
+    }
+
+
+    #cards{
+        justify-content: center;
+        align-items: center;
+        width: 450px;
+        height: 250px;
+        margin-left: 30px;
+    } 
+
+    .div0{
+        width: 380px;
+        height: 150px;
+    }
+
+    .attackCard{
+        width: 190px;
+        height: 25px;
+        text-align: left;
+        font-weight: normal;
+    
+        border-radius: 2px;
+        margin: 1.5px;
+        
+        letter-spacing: 1.8px;
+        background-color: #3f3f3f;
+        color: #ffffff;
+    }
+    
+    .defenseCard{
+        width: 190px;
+        height: 25px;
+        text-align: left;
+        font-weight: normal;
+    
+        border-radius: 2px;
+        margin: 1.5px;
+        
+        letter-spacing: 1.8px;
+        background-color: #3f3f3f;
+        color: #ffffff;
+    }
+    
+    .magicCard{
+        width: 190px;
+        height: 25px;
+        text-align: left;
+        font-weight: normal;
+    
+        border-radius: 2px;
+        margin: 1.5px;
+        
+        letter-spacing: 1.8px;
+        background-color: #3f3f3f;
+        color: #ffffff;
+    }
+    
+    .diffCard{
+        width: 190px;
+        height: 25px;
+        text-align: left;
+        font-weight: normal;
+    
+        border-radius: 2px;
+        margin: 1.5px;
+        
+        letter-spacing: 1.8px;
+        background-color: #3f3f3f;
+        color: #ffffff;
+    }
+    
+    .splashCard{
+        
+        width: 180px;
+        height: 150px;
+        border-radius: 8px;
+        box-shadow: 0px 8px 10px #101010;
+        /* border: blue solid 2px; */   
+    }
+        
+    .div3 h3 {
+        width: 157px;
+        height: 35px;    
+    }
+        
+    .iconImage{
+        height: 30px;
+        width: 30px;
+        margin-left: 25px;   
+    }
 }
