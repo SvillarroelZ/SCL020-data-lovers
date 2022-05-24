@@ -25,10 +25,19 @@ la planificacion del proyecto se llevo a cabo en github projects el cual esta di
 desarrollamos una encuesta para saber las necesidades reales de los jugadores aqui podemos visualizar algunas de las respuestas y el link de los resultados:
 https://forms.gle/TmYWPyNa4paanj7X8
 
-![alt text](img/README img/difficultysurvey.png)
+![alt text](src\img\READMEimg\difficultysurvey.png)
+![alt text](src\img\READMEimg\rolesurvey.png)
+![alt text](src\img\READMEimg\usersurvey.png)
 
-desarrollamos el prototipo de baja
-Prototipo alta fidelidad https://www.figma.com/file/FFf8gazAEYt8xh1MkXRWry/League-of-legends?node-id=178%3A2
+
+desarrollamos diferentes prototipos de baja fidelidad a lapiz para ordenar los contenedores:
+![alt text](src\img\READMEimg\lofiPrototype.jpeg)
+![alt text](src\img\READMEimg\lofiPrototype1.jpeg)
+
+Prototipo alta fidelidad que tambien se encuentra con mas detalle en el siguiente link:
+ https://www.figma.com/file/FFf8gazAEYt8xh1MkXRWry/League-of-legends?node-id=178%3A2
+ ![alt text](src\img\READMEimg\hifiprototype.png)
+
 
 La pantalla de inicio cuenta con un header que nos redirecciona a la pagina de descarga del juego 
 y a una pagina que nos muestra mas sobre RiotGames al centro se ve una imagen en movimiento sobre 
@@ -40,6 +49,7 @@ El footer de la pagina contiene los iconos que redireccionan al Twitter y Youtub
 ## 3. historias de usuario
 En base a la encuesta realizada nuestros usuarios objetivos son personas entre los 14 y 35 años de edad que juegan League of Legends o que les interesaria jugar y que quieren saber mas sobre los diferentes campeones sus roles y dificultad de juego.
 Por lo cual creamos las siguientes 4 historias de usuario:
+ ![alt text](src\img\READMEimg\userhistory.png)
 
 
 
