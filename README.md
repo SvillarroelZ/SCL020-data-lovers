@@ -25,6 +25,7 @@ la planificacion del proyecto se llevo a cabo en github projects el cual esta di
 desarrollamos una encuesta para saber las necesidades reales de los jugadores aqui podemos visualizar algunas de las respuestas y el link de los resultados:
 https://forms.gle/TmYWPyNa4paanj7X8
 
+<<<<<<< HEAD
 ![alt text](src\img\READMEimg\difficultysurvey.png)
 ![alt text](src\img\READMEimg\rolesurvey.png)
 ![alt text](src\img\READMEimg\usersurvey.png)
@@ -37,6 +38,9 @@ desarrollamos diferentes prototipos de baja fidelidad a lapiz para ordenar los c
 Prototipo alta fidelidad que tambien se encuentra con mas detalle en el siguiente link:
  https://www.figma.com/file/FFf8gazAEYt8xh1MkXRWry/League-of-legends?node-id=178%3A2
  ![alt text](src\img\READMEimg\hifiprototype.png)
+=======
+![alt text](src\img\README img\difficultysurvey.png)
+>>>>>>> e5bbf9bff6e28e83adad1c7efaa33743abaddcd3
 
 
 La pantalla de inicio cuenta con un header que nos redirecciona a la pagina de descarga del juego 
