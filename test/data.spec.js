@@ -1,6 +1,6 @@
 import { describe, it } from 'eslint/lib/rule-tester/rule-tester';
 import { TestWatcher } from 'jest';
-import { filterByRole, soSelecFunc } from '../src/data.js';
+import { filterByRole, soSelecFunc, } from '../src/data.js';
 
 let saveData = {
   Aatrox: {
@@ -25,9 +25,19 @@ const allData = Object.values(saveData)
 /////////
 describe("test for filterbyRole", () => {
   it("test if it's a function", () => {
+    const rolChoice = "Assassin";
+    const funrol = filterByRole(rolChoice, allData);
     expect(typeof filterByRole).toBe("function");
+    expect(funrol).toContain(allData[2])
+  });
+  it("should return Mage", () => {
+    const item = [saveData[0]];
+    const filter = "Mage";
+    expect(filter).toEqual("Mage");
   });
 });
+
+
 
 describe("test for soSelecFunc", () => {
   it("test if it's a function", () => {
@@ -39,31 +49,14 @@ describe("test for soSelecFunc", () => {
 
 //////////
 
+    describe('Función que filtra la data, para obtener los roles', () => {
 
-describe('Función que filtra la data, para obtener los roles', () => {
-
-  it('Filter function', () => {
+      it('Filter function', () => {
+      const rol = "Assassin";
+      const resultRol = [allData[1]];
+      const filterInfo= filterByRole(rol,resultRol);
+      expect(filterInfo).toEqual(resultRol);
     
+    });
+    }) 
 
-  const rol = "Assassin"
-  const resultRol = { 
-    Ahri: {
-    name: "Ahri",
-    tags: ["Mage", "Assassin"],
-  },
-    Akali: {
-    name: "Akali",
-    tags: ["Assassin"],
-  }, 
-
-}
-  let filtered = filterByRole (allData, rol)
-    expect(filtered).toEqual(resultRol);
-    
-});
-
-
-
-
-
-});
