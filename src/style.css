@@ -267,7 +267,7 @@ main{
     width: 520px;
 }
 
- #cards{
+#cards{
     display: none;
     justify-content: center;
     overflow: auto;
@@ -906,74 +906,115 @@ footer{
     body{
         /* background-image: url(img/backgroundPattern.png); */
         background-attachment: fixed;
-        border: greenyellow inset 1px;
+        
         width: 413px;
         height: 896px;
     }
 
-    header{
+    .nav{
         border: orangered solid 1px;
-        
+        width: auto;
     }
+
     .riot{
         width: 70px;
         margin-left: 10px;
     }
+
     .tittle{
         font-size: medium;
     }
+
     .play{
         width: 70px;
         height: 25px;
         margin: 5px;
         font-size: small;
-        
     }
 
     .container-firstScreen{
         border: cyan solid 1px;
         width: auto;
-        height: 480px;
+        height: 896px;
+    }
 
+    .video{
+        width: 350px;
+        height: 650px;
+        /* margin-top: 450px; */
+    }
+    .container-firstScreen button{
+        margin-top: -500px; 
     }
 
     .logoLeague{
         width: 250px;
-    }
-    .video{
-        width: 350px;
+        margin-bottom: 765px;
     }
     
-    
-    
-    /*.container-secondScreen{
-        width: 414px;
-        height: auto;
+    /*     --  -mobile-   SEGUNDA PANTALLA -mobile-   --     */
+    .container-secondScreen{
+        
+        border: rgb(79, 128, 0) solid 10px;
+        width: 300px;
+        height: 896px;
         justify-content: center;
         align-items: center;
     }
-    .container-roles{
-        /* display: flex;
-        flex-wrap: wrap; */
-        /* flex-direction: row;
+
+    .roles-div{
+        border: red solid 1px;
+        justify-content: center;
+        align-items: center;
+        width: 414px;
+        height: 100%;
+    }
+    .btnShow{
+        display: flex;
+        border: palevioletred solid 2px;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+    }
+    .btnShow button{
         width: 100px;
     }
+
+    .selectedOptions{
+        width: 50px;
+    }
+
+
+    .container-roles{
+        border: blue solid 2px;
+        width: 250px;
+    }
+
     .sub-cont-rol{
-        display: flex;
-        flex-wrap: wrap;
-
-        width: 1px;
+        width: 100px;
     }
-
-    .sub-cont-rol img{
-        width: 10px;
-    }
-
+    
     .contDiv{
+        justify-content: center;
+        width: 414px;
+
+    }
+    #cards{
+        display:none;
         width: 300px;
     }
-
-    #cards{
-        width: 250px;
-    } */ 
+    .div0{
+        
+        display:none;
+        width: 100px;
+    }
+    .diffCard{
+        
+        display:none;
+    }
+    .framesRol-div{
+        display: none;
+    }
+    
+    
 }
