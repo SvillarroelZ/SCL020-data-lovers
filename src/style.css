@@ -181,7 +181,6 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-items: center;
     width: 60%;
     height: 662px;
     /* border: blue 3px solid; */
@@ -289,8 +288,7 @@ main{
     border-radius: 15px;
     padding: 5px;
     box-shadow: 0px 8px 10px #101010;
-    margin: 12px;
-   
+    margin: 12px;   
 }
 
 .div1{
@@ -907,13 +905,13 @@ footer{
         /* background-image: url(img/backgroundPattern.png); */
         background-attachment: fixed;
         
-        width: 413px;
+        width: 414px;
         height: 896px;
     }
 
     .nav{
-        border: orangered solid 1px;
-        width: auto;
+        /* border: orangered solid 1px; */
+        width: 414px;
     }
 
     .riot{
@@ -933,7 +931,7 @@ footer{
     }
 
     .container-firstScreen{
-        border: cyan solid 1px;
+        /* border: cyan solid 1px; */
         width: auto;
         height: 896px;
     }
@@ -953,68 +951,193 @@ footer{
     }
     
     /*     --  -mobile-   SEGUNDA PANTALLA -mobile-   --     */
+    
+    main{
+        display: flex;
+        flex-direction: row;
+        width: 414px;
+        height: 896px;
+        margin: 0px;
+        padding: 0px;
+    }
     .container-secondScreen{
         
-        border: rgb(79, 128, 0) solid 10px;
-        width: 300px;
+        /* border: rgb(0, 3, 196) solid 2px; */
+        width: 414px;
         height: 896px;
         justify-content: center;
         align-items: center;
+        margin: 0px;
+        padding: 0px;
     }
 
     .roles-div{
-        border: red solid 1px;
-        justify-content: center;
-        align-items: center;
+        /* border: purple solid 1px; */
+        justify-content:none;
+        align-items:center; 
         width: 414px;
-        height: 100%;
+        height: 896px;
+        margin: 0px;
+        padding: 0px;
     }
+
     .btnShow{
         display: flex;
-        border: palevioletred solid 2px;
+        /* border: palevioletred solid 2px; */
         justify-content: center;
-        width: 50px;
+        align-items: center;
+        width: 100px;
         height: 50px;
+        margin: 0px;
+        margin-top: -300px;
+        margin-bottom: 50px;
+        padding: 0px;
+
     }
     .btnShow button{
-        width: 100px;
+        width: 150px;
+        height: 35px;
+        font-size: xx-small;
+        text-align: center;
+        margin: 0px;
+        margin-right: 5px;
+        padding: 0px;
     }
 
     .selectedOptions{
-        width: 50px;
+        font-size: xx-small;
+        width: 150px;
+        height: 35px;
+        margin: 0px;
+        margin-left: 5px;
+        padding: 0px;
     }
 
 
     .container-roles{
-        border: blue solid 2px;
-        width: 250px;
+        /* border: blue solid 2px; */
+        justify-content: center;
+        text-align: cen;
+        width: 380px;
+        margin: 0;
+        margin-right: 16.5px;
+        margin-bottom: 30px;
+        padding: 0px;
     }
 
+    .rButton{
+        display: none;
+    } 
+
     .sub-cont-rol{
+        font-size: xx-small;
         width: 100px;
+        padding: 0px;
+    }
+
+    .sub-cont-rol img{
+        width: 45px;
     }
     
     .contDiv{
         justify-content: center;
+        align-items: center;
         width: 414px;
+        height: 347px;
 
     }
     #cards{
-        display:none;
-        width: 300px;
+        justify-content: center;
+        align-items: center;
+        width: 440px;
+        height: 340px;
+        margin: 0px;
+        margin-right: 55px;
     }
     .div0{
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        padding: 4px;
+        height: 120px ;
+        width:370px ;
+    }
+
+    .splashCard{
+
+        width: 95%;
+        height: 115px;
+        border-radius: 15px;
+        margin-top: 4px;
+    }
+
+    
+.div3{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    width: 180px;
+    height: 45px;
+    margin-top: 2px;
+    
+    
+}
+
+    .div3 h3 {
+        width: 110px;
+        height: 28px;
+        text-align: center;
+        align-items: center;
         
-        display:none;
-        width: 100px;
+    }
+
+    .div4{
+            
+        width: 110px;
+        height: 118px; 
+    }
+    
+    .iconImage{
+        height: 27px;
+        width: 27px;
+        text-align: left;
+        margin: 2px;
+            
+    }
+
+    .attackCard{
+        width: 170px;
+        height: 20px;
+        font-size: smaller;
+    }
+
+    .defenseCard{
+        width: 170px;
+        height: 20px;
+        font-size: smaller;
+    }
+    
+    .magicCard{
+        width: 170px;
+        height: 20px;
+        font-size: smaller;
     }
     .diffCard{
+        width: 170px;
+        height: 20px;
+        font-size: smaller;
         
-        display:none;
     }
     .framesRol-div{
         display: none;
+        margin: 0px;
+        padding: 0px;
+        width: 0px;
+        height: 0px;
     }
     
-    
+    footer{
+        margin: 0px;
+        padding: 0px;
+    }
 }
