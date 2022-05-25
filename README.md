@@ -38,11 +38,12 @@ Prototipo alta fidelidad que también se encuentra con más detalle en el siguie
 
 
 La pantalla de inicio cuenta con un header que nos redirecciona a la página de descarga del juego y a una página que nos muestra más sobre RiotGames, al centro se ve una imagen en movimiento, sobre ella el logo de League of Legends y un botón que indica la palabra "INICIA", el cual hace un scroll en la página y nos ubica en la segunda pantalla.
+ ![alt text](src\img\READMEimg\firstscreen.png)
 
 La segunda pantalla cuenta con un botón que muestra tarjetas con todos los campeones y sus estadísticas de ataque, defensa, magia y dificultad, una lista de opciones para ordenar por dificultad ascendente o descendente y seis radio button junto a los iconos y nombres de cada rol dentro del juego el cual filtra la data permitiendo ver los campeones filtrados bajo un rol en específico y ordenados por dificultad.
 
 El footer de la página contiene los íconos que redireccionan al Twitter y Youtube de LoL, un logo de RiotGames que redirecciona a la página de Riot y un logo de LoL que redirecciona a la página de LoL.
-
+ ![alt text](src\img\READMEimg\secondscreen.png)
 ## 3. Historias de usuario
 En base a la encuesta realizada nuestros usuarios objetivos son personas entre los 14 y 35 años de edad que juegan League of Legends o que les interesaría jugar y que quieren saber más sobre los diferentes campeones sus roles y dificultad de juego.
 Por lo cual creamos las siguientes 4 historias de usuario:
