@@ -30,7 +30,8 @@ https://forms.gle/TmYWPyNa4paanj7X8
 
 Desarrollamos diferentes prototipos de baja fidelidad a lápiz para ordenar los contenedores:
 ![alt text](/src/img/imgGitHub/)
-![alt text](src\img\READMEimg\lofiPrototype1.jpeg)
+![alt text](/SCL020-data-lovers/src/img/imgGitHub/lofiPrototype1.jpg)
+![alt text](/SCL020-data-lovers/src/img/imgGitHub/lofiPrototype.jpg)
 
 Prototipo alta fidelidad que también se encuentra con más detalle en el siguiente link:
  https://www.figma.com/file/FFf8gazAEYt8xh1MkXRWry/League-of-legends?node-id=178%3A2
