@@ -87,3 +87,21 @@ describe("test for soSelecFunc", () => {
 });
 
 //////////
+describe("test for sortA", () => {
+  it("should return an object", () => {
+    const sortDataA=  sortA;
+    sortA.sort();
+    const sortSelected= "sortA";
+    const sorting = soSelecFunc(allData, sortSelected);
+    expect(sorting).toEqual(sortDataA);
+  });
+});
+describe("test for sortD", () => {
+  it("should return an object", () => {
+    const sortDataD=  sortD;
+    sortD.sort();
+    const sortSelected= "sortD";
+    const sorting = soSelecFunc(allData, sortSelected);
+    expect(sorting).toEqual(sortDataD);
+  });
+});
