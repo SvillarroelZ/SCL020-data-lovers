@@ -44,7 +44,7 @@ La pantalla de inicio cuenta con un header que nos redirecciona a la página de 
 
 La segunda pantalla cuenta con un botón que muestra tarjetas con todos los campeones y sus estadísticas de ataque, defensa, magia y dificultad, una lista de opciones para ordenar por dificultad ascendente o descendente y seis radio button junto a los iconos y nombres de cada rol dentro del juego el cual filtra la data permitiendo ver los campeones filtrados bajo un rol en específico y ordenados por dificultad.
  ![alt text](/src/img/imgGitHub/2.png)
-  ![alt text](/src/img/imgGitHub/3.png)
+ ![alt text](/src/img/imgGitHub/3.png)
 El footer de la página contiene los íconos que redireccionan al Twitter y Youtube de LoL, un logo de RiotGames que redirecciona a la página de Riot y un logo de LoL que redirecciona a la página de LoL.
  ![alt text](/src/img/imgGitHub/m2.png)
 ## 3. Historias de usuario
